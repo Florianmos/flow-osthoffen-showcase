@@ -55,7 +55,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-primary': 'linear-gradient(135deg, hsl(189 94% 55%) 0%, hsl(320 85% 60%) 100%)',
+        'gradient-primary': 'linear-gradient(135deg, hsl(189 100% 36%) 0%, hsl(320 85% 60%) 100%)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -91,10 +91,10 @@ export default {
         },
         "glow-pulse": {
           "0%, 100%": {
-            boxShadow: "0 0 20px hsla(189, 94%, 55%, 0.3)",
+            boxShadow: "0 0 20px hsla(189, 100%, 36%, 0.3)",
           },
           "50%": {
-            boxShadow: "0 0 40px hsla(189, 94%, 55%, 0.6)",
+            boxShadow: "0 0 40px hsla(189, 100%, 36%, 0.6)",
           }
         },
         "float": {

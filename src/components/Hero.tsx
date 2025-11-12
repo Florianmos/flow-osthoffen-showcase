@@ -38,11 +38,11 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto">
-            DJ Mobile Généraliste - Strasbourg, Haguenau & Kochersberg
+            DJ Mobile Généraliste - Strasbourg et Bas-Rhin
           </p>
           
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Animation musicale sur mesure pour mariages, anniversaires et soirées d'entreprise dans le Bas-Rhin. Sonorisation professionnelle de 20 à 150 personnes.
+            Animation musicale sur mesure pour mariages, anniversaires et soirées d'entreprise. Sonorisation professionnelle de 20 à 250 personnes. Je me déplace jusqu'à 1h autour de Strasbourg.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
