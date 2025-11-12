@@ -4,38 +4,38 @@ import { Music2, PartyPopper, Heart, Building2, Users, Mic2 } from "lucide-react
 const services = [
   {
     icon: Heart,
-    title: "Mariages",
-    description: "Créez des souvenirs inoubliables avec une ambiance musicale sur mesure pour votre jour spécial.",
+    title: "DJ pour Mariage",
+    description: "Animation musicale sur mesure pour votre mariage dans le Bas-Rhin. Créez des moments inoubliables avec une ambiance adaptée à votre jour unique.",
     color: "text-secondary",
   },
   {
     icon: PartyPopper,
-    title: "Soirées Privées",
-    description: "Anniversaires, fêtes de famille ou entre amis, je m'adapte à vos goûts musicaux.",
+    title: "Animation d'Anniversaire",
+    description: "DJ pour fêtes d'anniversaire et soirées privées à Strasbourg et environs. Ambiance garantie pour vos invités de 20 à 150 personnes.",
     color: "text-primary",
   },
   {
     icon: Building2,
-    title: "Événements Corporate",
-    description: "Soirées d'entreprise, séminaires, inaugurations avec une touche professionnelle.",
+    title: "Soirée d'Entreprise",
+    description: "Animation professionnelle pour événements corporate, séminaires et after-work dans le Kochersberg et le Bas-Rhin.",
     color: "text-accent",
   },
   {
     icon: Users,
-    title: "Soirées Clubbing",
-    description: "Des sets énergiques pour faire danser vos invités toute la nuit.",
+    title: "Disco Mobile",
+    description: "DJ mobile avec sonorisation et éclairage professionnel pour tous vos événements à Haguenau, Strasbourg et Osthoffen.",
     color: "text-secondary",
   },
   {
     icon: Music2,
-    title: "Festivals",
-    description: "Performances live adaptées aux grands événements et festivals musicaux.",
+    title: "DJ pour Soirée",
+    description: "Animation musicale adaptée à tous styles et tous événements. Des sets énergiques pour faire danser vos invités toute la nuit.",
     color: "text-primary",
   },
   {
     icon: Mic2,
-    title: "Animation",
-    description: "DJ et animateur pour dynamiser votre événement et créer une atmosphère unique.",
+    title: "DJ Sonorisation",
+    description: "Matériel audio et éclairage haut de gamme adapté à la taille de votre événement. Installation professionnelle garantie.",
     color: "text-accent",
   },
 ];
@@ -49,7 +49,7 @@ const Services = () => {
             <span className="text-gradient">Mes Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Des prestations adaptées à tous types d'événements pour créer l'ambiance parfaite
+            DJ généraliste mobile aux alentours de Strasbourg, Haguenau et Kochersberg pour rendre vos événements uniques
           </p>
         </div>
 

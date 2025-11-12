@@ -114,8 +114,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
-                  <a href="tel:+33600000000" className="text-muted-foreground hover:text-primary transition-colors">
-                    06 XX XX XX XX
+                  <a href="tel:+33610196373" className="text-muted-foreground hover:text-primary transition-colors">
+                    06 10 19 63 73
                   </a>
                 </div>
               </div>
@@ -128,8 +128,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a href="mailto:contact@djflow.fr" className="text-muted-foreground hover:text-primary transition-colors">
-                    contact@djflow.fr
+                  <a href="mailto:contact@florianmossler.fr" className="text-muted-foreground hover:text-primary transition-colors">
+                    contact@florianmossler.fr
                   </a>
                 </div>
               </div>
@@ -143,8 +143,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Localisation</h3>
                   <p className="text-muted-foreground">
-                    Osthoffen, Alsace<br />
-                    Interventions dans toute la région
+                    17 rue Liberté<br />
+                    67990 Osthoffen, Bas-Rhin<br />
+                    Zone d'intervention : Strasbourg, Haguenau, Kochersberg
                   </p>
                 </div>
               </div>
@@ -181,7 +182,9 @@ const Contact = () => {
               </p>
               <div className="text-sm text-muted-foreground">
                 <p>⏰ Lun - Ven : 9h - 19h</p>
-                <p>⏰ Sam - Dim : Sur rendez-vous</p>
+                <p>⏰ Samedi : 9h - 00h</p>
+                <p>⏰ Dimanche : 9h - 19h</p>
+                <p className="mt-2 text-xs">Fermé du 20 déc. au 4 janv.</p>
               </div>
             </Card>
           </div>

@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">DJ Professionnel à Osthoffen</span>
+            <span className="text-sm text-muted-foreground">DJ Professionnel à Osthoffen | Bas-Rhin | Strasbourg</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
@@ -38,11 +38,11 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto">
-            Créateur d'ambiances inoubliables
+            DJ Mobile Généraliste - Strasbourg, Haguenau & Kochersberg
           </p>
           
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Transformez vos événements en expériences musicales uniques avec un DJ passionné et professionnel
+            Animation musicale sur mesure pour mariages, anniversaires et soirées d'entreprise dans le Bas-Rhin. Sonorisation professionnelle de 20 à 150 personnes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -1,3 +1,4 @@
+# robots.txt pour DJ Flo'w - DJ Professionnel Bas-Rhin
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +13,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemaps
+Sitemap: https://florianmossler.fr/sitemap.xml
+
+# Optimisation du crawl
+Crawl-delay: 1
