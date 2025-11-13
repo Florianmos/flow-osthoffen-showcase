@@ -1,10 +1,57 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Facebook, Instagram, Music } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
+  // const form = useRef<HTMLFormElement>(null);
+  // const { toast } = useToast();
+
+  // const [state, handleSubmit] = useForm("xldadoqo");
+  // useEffect(() => {
+  //   if (state.succeeded) {
+  //     toast({
+  //       title: "✅ Message envoyé !",
+  //       description: "Merci pour votre message, je vous répondrai sous 24h.",
+  //     });
+  //     form.current?.reset();
+  //   } else if (state.errors && Object.keys(state.errors).length) {
+  //     toast({
+  //       title: "❌ Une erreur s’est produite",
+  //       description:
+  //         "Veuillez envoyer un email directement à fm.mossler@gmail.com.",
+  //       variant: "destructive",
+  //     });
+  //   }
+  // }, [state, toast]);
+
+  const form = useRef<HTMLFormElement>(null);
+  const { toast } = useToast();
+
+  const [state, formspreeSubmit] = useForm("xldadoqo");
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: "✅ Message envoyé !",
+        description: "Merci pour votre message, je vous répondrai sous 24h.",
+      });
+    } else if (state.errors && state.errors.length > 0) {
+      toast({
+        title: "❌ Une erreur s’est produite",
+        description:
+          "Veuillez envoyer un email directement à fm.mossler@gmail.com.",
+        variant: "destructive",
+      });
+    }
+  }, [state.succeeded, state.errors, toast]);
+
   return (
     <section id="contact" className="py-24 relative">
       <div className="container mx-auto px-4">
@@ -21,23 +68,39 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="bg-card/50 backdrop-blur-sm border-border p-8">
-            <form className="space-y-6">
+            <form
+              action="https://formspree.io/f/xldadoqo"
+              method="POST"
+              ref={form}
+              onSubmit={formspreeSubmit}
+              className="space-y-6"
+            >
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-2 text-foreground"
+                  >
                     Nom *
                   </label>
                   <Input
+                    id="Nom :"
+                    name="name"
                     placeholder="Votre nom"
                     required
                     className="bg-background/50 border-border focus:border-primary"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">
+                  <label
+                    htmlFor="firstname"
+                    className="block text-sm font-medium mb-2 text-foreground"
+                  >
                     Prénom *
                   </label>
                   <Input
+                    id="firstname"
+                    name="firstname"
                     placeholder="Votre prénom"
                     required
                     className="bg-background/50 border-border focus:border-primary"
@@ -46,11 +109,17 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-foreground">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2 text-foreground"
+                >
                   Email *
                 </label>
                 <Input
                   type="email"
+                  id="email"
+                  name="email"
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                   placeholder="votre@email.com"
                   required
                   className="bg-background/50 border-border focus:border-primary"
@@ -58,11 +127,16 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-foreground">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium mb-2 text-foreground"
+                >
                   Téléphone *
                 </label>
                 <Input
                   type="tel"
+                  id="phone"
+                  name="phone"
                   placeholder="06 XX XX XX XX"
                   required
                   className="bg-background/50 border-border focus:border-primary"
@@ -70,32 +144,47 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-foreground">
+                <label
+                  htmlFor="typeevenement"
+                  className="block text-sm font-medium mb-2 text-foreground"
+                >
                   Type d'événement *
                 </label>
                 <Input
                   required
                   placeholder="Mariage, Anniversaire, Corporate..."
+                  id="typeevenement"
+                  name="typeevenement"
                   className="bg-background/50 border-border focus:border-primary"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-foreground">
+                <label
+                  htmlFor="date"
+                  className="block text-sm font-medium mb-2 text-foreground"
+                >
                   Date de l'événement
                 </label>
                 <Input
                   type="date"
+                  id="date"
+                  name="date"
                   className="bg-background/50 border-border focus:border-primary"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-foreground">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2 text-foreground"
+                >
                   Message *
                 </label>
                 <Textarea
                   required
+                  id="message"
+                  name="message"
                   placeholder="Parlez-moi de votre projet..."
                   rows={5}
                   className="bg-background/50 border-border focus:border-primary resize-none"
@@ -104,10 +193,11 @@ const Contact = () => {
 
               <Button
                 type="submit"
+                disabled={state.submitting}
                 className="w-full bg-gradient-primary text-foreground hover:opacity-90 transition-opacity text-lg py-6"
               >
                 <Mail className="mr-2 h-5 w-5" />
-                Envoyer ma demande
+                {state.submitting ? "Envoi en cours..." : "Envoyer ma demande"}
               </Button>
             </form>
           </Card>
