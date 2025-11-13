@@ -80,7 +80,7 @@ const Partners = () => {
             </p>
             <a
               href="#contact"
-              className="inline-block px-8 py-3 bg-gradient-primary text-background font-semibold rounded-lg hover:opacity-90 transition-opacity"
+              className="inline-block px-8 py-3 bg-gradient-primary text-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
               Devenir Partenaire
             </a>

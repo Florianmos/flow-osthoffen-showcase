@@ -10,6 +10,11 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Logo in top-left corner */}
+      <div className="absolute top-4 left-4 z-20">
+        <img src={logo} alt="DJ Flo'w Logo" className="h-12 md:h-16 w-auto" />
+      </div>
+
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -29,17 +34,13 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="animate-fade-in">
-          {/* Logo */}
-          <div className="mb-8 flex justify-center">
-            <img src={logo} alt="DJ Flo'w Logo" className="h-24 md:h-32 w-auto glow-on-scroll" />
-          </div>
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">DJ Professionnel à Osthoffen | Bas-Rhin | Strasbourg</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 glow-on-scroll">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
             <span className="text-gradient glow-text">DJ Flo'w</span>
           </h1>
           

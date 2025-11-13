@@ -119,7 +119,7 @@ const Services = () => {
                   <div
                     className={`w-14 h-14 rounded-lg bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform`}
                   >
-                    <Icon className="w-7 h-7 text-background" />
+                    <Icon className="w-7 h-7 text-foreground" />
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-foreground">
@@ -142,10 +142,10 @@ const Services = () => {
 
         <div className="mt-16 text-center">
           <Card className="bg-gradient-primary p-8 border-0 max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-background mb-4 text-foreground">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
               Matériel Professionnel Haut de Gamme
             </h3>
-            <p className="text-background/90 text-lg text-foreground">
+            <p className="text-foreground/90 text-lg">
               Colonnes LD Systems, éclairage LED professionnel et compact.
               Matériel pro adapté de 20 à 250 personnes.
             </p>

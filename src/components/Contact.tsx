@@ -97,7 +97,7 @@ const Contact = () => {
 
               <Button 
                 type="submit" 
-                className="w-full bg-gradient-primary text-background hover:opacity-90 transition-opacity text-lg py-6"
+                className="w-full bg-gradient-primary text-foreground hover:opacity-90 transition-opacity text-lg py-6"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Envoyer ma demande
@@ -110,7 +110,7 @@ const Contact = () => {
             <Card className="bg-card/50 backdrop-blur-sm border-border p-6 hover-lift">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-background" />
+                  <Phone className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
@@ -124,7 +124,7 @@ const Contact = () => {
             <Card className="bg-card/50 backdrop-blur-sm border-border p-6 hover-lift">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-background" />
+                  <Mail className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
@@ -138,7 +138,7 @@ const Contact = () => {
             <Card className="bg-card/50 backdrop-blur-sm border-border p-6 hover-lift">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-background" />
+                  <MapPin className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Localisation</h3>
@@ -152,25 +152,25 @@ const Contact = () => {
             </Card>
 
             <Card className="bg-gradient-primary p-6 border-0">
-              <h3 className="font-semibold text-background mb-4 text-lg">Suivez-moi</h3>
+              <h3 className="font-semibold text-foreground mb-4 text-lg">Suivez-moi</h3>
               <div className="flex gap-4">
                 <a 
                   href="#" 
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
                 >
-                  <Facebook className="w-6 h-6 text-background" />
+                  <Facebook className="w-6 h-6 text-foreground" />
                 </a>
                 <a 
                   href="#" 
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
                 >
-                  <Instagram className="w-6 h-6 text-background" />
+                  <Instagram className="w-6 h-6 text-foreground" />
                 </a>
                 <a 
                   href="#" 
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
                 >
-                  <Music className="w-6 h-6 text-background" />
+                  <Music className="w-6 h-6 text-foreground" />
                 </a>
               </div>
             </Card>
