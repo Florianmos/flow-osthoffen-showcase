@@ -7,7 +7,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Info } from "lucide-react";
+import { Eye } from "lucide-react";
 
 interface ServiceDetail {
   title: string;
@@ -24,8 +24,12 @@ const ServiceDetailsDialog = ({ serviceTitle, details, equipment }: ServiceDetai
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" size="sm" className="mt-4">
-          <Info className="w-4 h-4 mr-2" />
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="mt-4 w-full border-2 border-primary text-foreground hover:bg-primary/10 hover:border-primary/80 transition-all"
+        >
+          <Eye className="w-4 h-4 mr-2" />
           Voir les détails
         </Button>
       </DialogTrigger>
@@ -44,7 +48,7 @@ const ServiceDetailsDialog = ({ serviceTitle, details, equipment }: ServiceDetai
                 {detail.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start gap-2">
                     <span className="text-primary mt-1">✓</span>
-                    <span className="text-muted-foreground">{item}</span>
+                    <span className="text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -57,8 +61,8 @@ const ServiceDetailsDialog = ({ serviceTitle, details, equipment }: ServiceDetai
               <ul className="space-y-2">
                 {equipment.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    <span className="text-muted-foreground">{item}</span>
+                    <span className="text-primary mt-1">•</span>
+                    <span className="text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>

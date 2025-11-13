@@ -9,7 +9,7 @@ const Contact = () => {
     <section id="contact" className="py-24 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-on-scroll">
             <span className="text-gradient">Contactez-moi</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -114,8 +114,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
-                  <a href="tel:+33610196373" className="text-muted-foreground hover:text-primary transition-colors">
-                    06 10 19 63 73
+                  <a href="tel:+33699486638" className="text-muted-foreground hover:text-primary transition-colors">
+                    06 99 48 66 38
                   </a>
                 </div>
               </div>
@@ -128,8 +128,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a href="mailto:contact@florianmossler.fr" className="text-muted-foreground hover:text-primary transition-colors">
-                    contact@florianmossler.fr
+                  <a href="mailto:fm.mossler@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    fm.mossler@gmail.com
                   </a>
                 </div>
               </div>

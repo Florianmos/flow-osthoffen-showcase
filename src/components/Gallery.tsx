@@ -2,17 +2,18 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Image, Video, Play } from "lucide-react";
+import aboutHistory from "@/assets/about-history.jpg";
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState("photos");
 
   const photos = [
-    { id: 1, url: "/gallery/photo-1.jpg", alt: "DJ Setup 1" },
-    { id: 2, url: "/images/gallery/photo-2.jpg", alt: "Event 1" },
-    { id: 3, url: "/images/gallery/photo-3.jpg", alt: "Wedding Event" },
-    { id: 4, url: "/images/gallery/photo-4.jpg", alt: "Party Night" },
-    { id: 5, url: "/images/gallery/photo-5.jpg", alt: "Club Event" },
-    { id: 6, url: "/images/gallery/photo-6.jpg", alt: "Concert Setup" },
+    { id: 1, url: aboutHistory, alt: "Mariage - Ambiance salle" },
+    { id: 2, url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&auto=format&fit=crop", alt: "DJ Setup Pro" },
+    { id: 3, url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop", alt: "Soirée d'entreprise" },
+    { id: 4, url: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&auto=format&fit=crop", alt: "Animation mariage" },
+    { id: 5, url: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&auto=format&fit=crop", alt: "Événement privé" },
+    { id: 6, url: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop", alt: "Anniversaire" },
   ];
 
   const videos = [
@@ -43,7 +44,7 @@ const Gallery = () => {
     <section id="gallery" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-on-scroll">
             <span className="text-gradient">Photos & Vidéos</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
