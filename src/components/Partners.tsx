@@ -28,9 +28,9 @@ const partners = [
   },
 
   {
-    name: "Commune d'Osthoffen",
-    type: "Commune de l'Eurométropole",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/35/Blason_ville_fr_Osthoffen_%28Bas-Rhin%29.svg",
+    name: "DJ R-ewent's",
+    type: "Associé et partenaire DJ de confiance",
+    logo: "https://scontent.fcdg2-1.fna.fbcdn.net/v/t39.30808-6/292628997_559105505800779_5756477063729793271_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=612VhoBYqbUQ7kNvwE6Kvnt&_nc_oc=AdlNT_eUHrcBHmw8XhBc-YnrcBNWUDhIyq1bfOumqGoDI_6pWPtr7OYXwfILvHOEviA&_nc_zt=23&_nc_ht=scontent.fcdg2-1.fna&_nc_gid=N-UDzc15VdfcTCfXMFYgLA&oh=00_Afitqys_dBCX1dj3I-A45_1usDI36s7sxF1LDldcPPyLWA&oe=691B68F0",
   },
 ];
 
