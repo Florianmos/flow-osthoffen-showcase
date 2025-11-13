@@ -125,7 +125,7 @@ const Services = () => {
                 <h3 className="text-xl font-semibold mb-2 text-foreground">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed minheighttext buttonbottomtext">
                   {service.description}
                 </p>
                 {service.details && (

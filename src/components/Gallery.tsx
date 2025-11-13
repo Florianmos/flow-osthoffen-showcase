@@ -2,39 +2,71 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Image, Video } from "lucide-react";
-import aboutHistory from "@/assets/about-history.jpg";
+import photo1 from "@/assets/gallery/photo-1.jpg.jfif";
+import photo2 from "@/assets/gallery/photo-2.jpg.jfif";
+import photo3 from "@/assets/gallery/photo-3.jpg.jfif";
+import photo4 from "@/assets/gallery/photo-4.jpg.jfif";
+import photo5 from "@/assets/gallery/photo-5.jpg.jpg";
+import photo6 from "@/assets/gallery/photo-6.jpg.jpg";
+import photovid1 from "@/assets/video/vid1.jpg";
+import vid1 from "@/assets/video/vid1.mp4";
+import photovid2 from "@/assets/video/vid2.jpg";
+import vid2 from "@/assets/video/vid2.mp4";
+import photovid3 from "@/assets/video/vid3.jpg";
+import vid3 from "@/assets/video/vid3.mp4";
 import VideoDialog from "./VideoDialog";
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState("photos");
 
   const photos = [
-    { id: 1, url: aboutHistory, alt: "Mariage - Ambiance salle" },
-    { id: 2, url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&auto=format&fit=crop", alt: "DJ Setup Pro" },
-    { id: 3, url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop", alt: "Soirée d'entreprise" },
-    { id: 4, url: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&auto=format&fit=crop", alt: "Animation mariage" },
-    { id: 5, url: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&auto=format&fit=crop", alt: "Événement privé" },
-    { id: 6, url: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop", alt: "Anniversaire" },
+    {
+      id: 1,
+      url: photo1,
+      alt: "Mariage - Ambiance salle par LED - Domaine du Haut-Koenigsbourg",
+    },
+    {
+      id: 2,
+      url: photo2,
+      alt: "Mariage - L & T",
+    },
+    {
+      id: 3,
+      url: photo5,
+      alt: "Soirée d'été - Camping Plage du Staedly",
+    },
+    {
+      id: 4,
+      url: photo4,
+      alt: "Mariage - Salle festive Ernolsheim les Savernes",
+    },
+    {
+      id: 5,
+      url: photo3,
+      alt: "Mariage - I & P",
+    },
+    { id: 6, url: photo6, alt: "Mariage - A & G - Rome Philippe Geispolsheim" },
   ];
 
   const videos = [
     {
       id: 1,
-      thumbnail: "https://images.unsplash.com/photo-1598387181032-a3103a2db5b1?w=800",
-      title: "Mariage - Château de Pourtalès",
-      url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      thumbnail: photovid1,
+      title: "Soirée d'été - Camping Plage du Staedly",
+      url: vid1,
     },
     {
       id: 2,
-      thumbnail: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800",
-      title: "Soirée Corporate - Tech Summit 2024",
-      url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      thumbnail: photovid2,
+      title: "Anniversaire de Barbara - Salle polyvalente Dangolsheim",
+      url: vid2,
     },
     {
       id: 3,
-      thumbnail: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800",
-      title: "Festival d'été - Strasbourg",
-      url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      thumbnail: photovid3,
+      title:
+        "Sonorisation cérémonie laïque et préparatif - Château d'Einhartshausen | Phalsbourg",
+      url: vid3,
     },
   ];
 

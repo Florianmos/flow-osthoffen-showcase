@@ -105,6 +105,23 @@ const Testimonials = () => {
             </Card>
           ))}
         </div>
+        <div className="mt-16 text-center">
+          <Card className="bg-card/50 backdrop-blur-sm border-primary/30 p-8 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Partagez votre expérience !
+            </h3>
+            <p className="text-muted-foreground text-lg mb-6">
+              Laissez-moi un petit mot sur votre expérience. Vos avis sont
+              précieux et me motivent à donner le meilleur à chaque soirée.
+            </p>
+            <a
+              href="#contact"
+              className="inline-block px-8 py-3 bg-gradient-primary text-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
+            >
+              Laisser un avis
+            </a>
+          </Card>
+        </div>
       </div>
     </section>
   );

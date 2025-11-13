@@ -13,7 +13,8 @@ const Contact = () => {
             <span className="text-gradient">Contactez-moi</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discutons de votre projet et créons ensemble l'événement de vos rêves
+            Discutons de votre projet et créons ensemble l'événement de vos
+            rêves
           </p>
         </div>
 
@@ -26,8 +27,9 @@ const Contact = () => {
                   <label className="block text-sm font-medium mb-2 text-foreground">
                     Nom *
                   </label>
-                  <Input 
+                  <Input
                     placeholder="Votre nom"
+                    required
                     className="bg-background/50 border-border focus:border-primary"
                   />
                 </div>
@@ -35,8 +37,9 @@ const Contact = () => {
                   <label className="block text-sm font-medium mb-2 text-foreground">
                     Prénom *
                   </label>
-                  <Input 
+                  <Input
                     placeholder="Votre prénom"
+                    required
                     className="bg-background/50 border-border focus:border-primary"
                   />
                 </div>
@@ -46,9 +49,10 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2 text-foreground">
                   Email *
                 </label>
-                <Input 
+                <Input
                   type="email"
                   placeholder="votre@email.com"
+                  required
                   className="bg-background/50 border-border focus:border-primary"
                 />
               </div>
@@ -57,9 +61,10 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2 text-foreground">
                   Téléphone *
                 </label>
-                <Input 
+                <Input
                   type="tel"
                   placeholder="06 XX XX XX XX"
+                  required
                   className="bg-background/50 border-border focus:border-primary"
                 />
               </div>
@@ -68,7 +73,8 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2 text-foreground">
                   Type d'événement *
                 </label>
-                <Input 
+                <Input
+                  required
                   placeholder="Mariage, Anniversaire, Corporate..."
                   className="bg-background/50 border-border focus:border-primary"
                 />
@@ -78,7 +84,7 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2 text-foreground">
                   Date de l'événement
                 </label>
-                <Input 
+                <Input
                   type="date"
                   className="bg-background/50 border-border focus:border-primary"
                 />
@@ -88,15 +94,16 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2 text-foreground">
                   Message *
                 </label>
-                <Textarea 
+                <Textarea
+                  required
                   placeholder="Parlez-moi de votre projet..."
                   rows={5}
                   className="bg-background/50 border-border focus:border-primary resize-none"
                 />
               </div>
 
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full bg-gradient-primary text-foreground hover:opacity-90 transition-opacity text-lg py-6"
               >
                 <Mail className="mr-2 h-5 w-5" />
@@ -113,9 +120,14 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
-                  <a href="tel:+33699486638" className="text-muted-foreground hover:text-primary transition-colors">
-                    06 99 48 66 38
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Téléphone
+                  </h3>
+                  <a
+                    href="tel:+33610196373"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    06 10 19 63 73
                   </a>
                 </div>
               </div>
@@ -128,7 +140,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a href="mailto:fm.mossler@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href="mailto:fm.mossler@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     fm.mossler@gmail.com
                   </a>
                 </div>
@@ -141,10 +156,14 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Localisation</h3>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Localisation
+                  </h3>
                   <p className="text-muted-foreground">
-                    17 rue Liberté<br />
-                    67990 Osthoffen, Bas-Rhin<br />
+                    17 rue Liberté
+                    <br />
+                    67990 Osthoffen, Bas-Rhin
+                    <br />
                     Zone d'intervention : Strasbourg, Haguenau, Kochersberg
                   </p>
                 </div>
@@ -152,22 +171,24 @@ const Contact = () => {
             </Card>
 
             <Card className="bg-gradient-primary p-6 border-0">
-              <h3 className="font-semibold text-foreground mb-4 text-lg">Suivez-moi</h3>
+              <h3 className="font-semibold text-foreground mb-4 text-lg">
+                Suivez-moi
+              </h3>
               <div className="flex gap-4">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
                 >
                   <Facebook className="w-6 h-6 text-foreground" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
                 >
                   <Instagram className="w-6 h-6 text-foreground" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
                 >
                   <Music className="w-6 h-6 text-foreground" />
@@ -176,14 +197,17 @@ const Contact = () => {
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm border-border p-6">
-              <h3 className="font-semibold text-foreground mb-3">Disponibilité</h3>
+              <h3 className="font-semibold text-foreground mb-3">
+                Disponibilité
+              </h3>
               <p className="text-muted-foreground mb-4">
-                Je réponds généralement sous 24h. Pour une demande urgente, n'hésitez pas à m'appeler directement.
+                Je réponds généralement sous 24h. Pour une demande urgente,
+                n'hésitez pas à m'appeler directement.
               </p>
               <div className="text-sm text-muted-foreground">
                 <p>⏰ Lun - Ven : 9h - 19h</p>
-                <p>⏰ Samedi : 9h - 00h</p>
-                <p>⏰ Dimanche : 9h - 19h</p>
+                <p>⏰ Samedi : 9h - 14h</p>
+                <p>⏰ Dimanche : 10h - 19h</p>
                 <p className="mt-2 text-xs">Fermé du 20 déc. au 4 janv.</p>
               </div>
             </Card>

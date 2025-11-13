@@ -20,14 +20,18 @@ interface ServiceDetailsDialogProps {
   equipment?: string[];
 }
 
-const ServiceDetailsDialog = ({ serviceTitle, details, equipment }: ServiceDetailsDialogProps) => {
+const ServiceDetailsDialog = ({
+  serviceTitle,
+  details,
+  equipment,
+}: ServiceDetailsDialogProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button 
-          variant="outline" 
-          size="sm" 
-          className="mt-4 w-full border-2 border-primary text-foreground hover:bg-primary/10 hover:border-primary/80 transition-all"
+        <Button
+          variant="outline"
+          size="sm"
+          className="mt-4 w-full border-2 border-primary text-foreground hover:bg-primary/10 hover:border-primary/80 transition-all buttonbottom"
         >
           <Eye className="w-4 h-4 mr-2" />
           Voir les détails
@@ -43,7 +47,9 @@ const ServiceDetailsDialog = ({ serviceTitle, details, equipment }: ServiceDetai
         <div className="space-y-6 mt-4">
           {details.map((detail, index) => (
             <div key={index}>
-              <h3 className="font-semibold text-lg mb-3 text-primary">{detail.title}</h3>
+              <h3 className="font-semibold text-lg mb-3 text-primary">
+                {detail.title}
+              </h3>
               <ul className="space-y-2">
                 {detail.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start gap-2">
@@ -54,10 +60,12 @@ const ServiceDetailsDialog = ({ serviceTitle, details, equipment }: ServiceDetai
               </ul>
             </div>
           ))}
-          
+
           {equipment && equipment.length > 0 && (
             <div className="mt-6 pt-6 border-t border-border">
-              <h3 className="font-semibold text-lg mb-3 text-primary">Matériel Professionnel</h3>
+              <h3 className="font-semibold text-lg mb-3 text-primary">
+                Matériel Professionnel
+              </h3>
               <ul className="space-y-2">
                 {equipment.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">

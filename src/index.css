@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --accent-foreground: 240 10% 8%;
 
     --muted: 240 6% 20%;
-    --muted-foreground: 240 5% 65%;
+    --muted-foreground: 240 5% 80%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -89,6 +89,7 @@ All colors MUST be HSL.
       filter: drop-shadow(0 0 20px hsl(189 100% 36% / 0.6));
       transform: scale(1.02);
     }
+  
   }
 
 @layer base {
@@ -100,3 +101,25 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+.header--logo img{
+      height: 28px;
+    width: auto;
+}
+.header--logo{
+      left: 30px;
+      top: 20px;
+    }
+    .logofooter{
+      height: 22px;
+      width: auto;
+      margin-left: 10px;
+    }
+
+    .buttonbottomtext{
+        margin-bottom: 50px;
+    }
+    .buttonbottom{
+        position: absolute;
+        bottom: 25px;
+        width: calc(100% - 3rem);
+    }

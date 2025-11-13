@@ -2,6 +2,11 @@ import { Card } from "@/components/ui/card";
 
 const partners = [
   {
+    name: "DJ R-ewent's",
+    type: "Associé et partenaire DJ de confiance",
+    logo: "https://scontent.fcdg2-1.fna.fbcdn.net/v/t39.30808-6/292628997_559105505800779_5756477063729793271_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=612VhoBYqbUQ7kNvwE6Kvnt&_nc_oc=AdlNT_eUHrcBHmw8XhBc-YnrcBNWUDhIyq1bfOumqGoDI_6pWPtr7OYXwfILvHOEviA&_nc_zt=23&_nc_ht=scontent.fcdg2-1.fna&_nc_gid=N-UDzc15VdfcTCfXMFYgLA&oh=00_Afitqys_dBCX1dj3I-A45_1usDI36s7sxF1LDldcPPyLWA&oe=691B68F0",
+  },
+  {
     name: "Office de tourisme du Pays Rhénan",
     type: "Etablissement Public",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8E04wJCOE2yKBn0bXJhkCXCgnsQXITvW0fA&s",
@@ -25,12 +30,6 @@ const partners = [
     name: "FFSA - Terre 67",
     type: "Club Autocross Steinbourg",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi-fsErukZTN_ZrkgftEmucrVPCOZfiLhA3Q&s",
-  },
-
-  {
-    name: "DJ R-ewent's",
-    type: "Associé et partenaire DJ de confiance",
-    logo: "https://scontent.fcdg2-1.fna.fbcdn.net/v/t39.30808-6/292628997_559105505800779_5756477063729793271_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=612VhoBYqbUQ7kNvwE6Kvnt&_nc_oc=AdlNT_eUHrcBHmw8XhBc-YnrcBNWUDhIyq1bfOumqGoDI_6pWPtr7OYXwfILvHOEviA&_nc_zt=23&_nc_ht=scontent.fcdg2-1.fna&_nc_gid=N-UDzc15VdfcTCfXMFYgLA&oh=00_Afitqys_dBCX1dj3I-A45_1usDI36s7sxF1LDldcPPyLWA&oe=691B68F0",
   },
 ];
 
@@ -67,24 +66,6 @@ const Partners = () => {
               <p className="text-xs text-muted-foreground">{partner.type}</p>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <Card className="bg-card/50 backdrop-blur-sm border-primary/30 p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Vous êtes un professionnel ?
-            </h3>
-            <p className="text-muted-foreground text-lg mb-6">
-              Collaborons ensemble pour offrir des prestations d'exception à nos
-              clients
-            </p>
-            <a
-              href="#contact"
-              className="inline-block px-8 py-3 bg-gradient-primary text-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Devenir Partenaire
-            </a>
-          </Card>
         </div>
       </div>
     </section>
