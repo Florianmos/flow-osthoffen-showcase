@@ -40,12 +40,12 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">
-              DJ Professionnel à Osthoffen | Bas-Rhin | Strasbourg
+              DJ Professionnel secteur Alsace
             </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-            <span className="text-gradient glow-text">DJ Flo'w</span>
+            <span className="text-gradient glow-text">DJ FLO'W</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto">
@@ -55,7 +55,7 @@ const Hero = () => {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Animation musicale sur mesure pour mariages, anniversaires et
             soirées d'entreprise. Sonorisation professionnelle de 20 à 250
-            personnes. Je me déplace jusqu'à 1h autour de Strasbourg.
+            personnes. Déplacements jusqu'à 1h autour de Strasbourg.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -65,7 +65,7 @@ const Hero = () => {
               onClick={() => scrollToSection("contact")}
             >
               <Music className="mr-2 h-5 w-5" />
-              Réserver maintenant
+              Prendre contact
             </Button>
             <Button
               size="lg"
@@ -73,7 +73,7 @@ const Hero = () => {
               className="border-primary/50 text-foreground hover:bg-primary/10 text-lg px-8 py-6"
               onClick={() => scrollToSection("services")}
             >
-              Découvrir mes services
+              Découvrir les services
             </Button>
           </div>
         </div>
