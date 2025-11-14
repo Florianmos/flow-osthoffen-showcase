@@ -250,11 +250,8 @@ const Contact = () => {
                     Localisation
                   </h3>
                   <p className="text-muted-foreground">
-                    17 rue Liberté
-                    <br />
-                    67990 Osthoffen, Bas-Rhin
-                    <br />
-                    Zone d'intervention : Strasbourg, Haguenau, Kochersberg
+                    Secteur de déplacement : Alsace, Bas-Rhin, Strasbourg,
+                    Haguenau, Kochersberg, ...
                   </p>
                 </div>
               </div>
@@ -297,7 +294,6 @@ const Contact = () => {
               <div className="text-sm text-muted-foreground">
                 <p>⏰ Lun - Ven : 9h - 19h</p>
                 <p>⏰ Samedi : 9h - 14h</p>
-                <p>⏰ Dimanche : 10h - 19h</p>
                 <p className="mt-2 text-xs">Fermé du 20 déc. au 4 janv.</p>
               </div>
             </Card>
