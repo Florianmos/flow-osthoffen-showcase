@@ -79,10 +79,10 @@ export function AddReviewDialog() {
         description: "Merci pour votre témoignage. Il apparaît maintenant sur le site.",
       });
 
-      setOpen(false);
       e.currentTarget.reset();
       setRating(5);
       setCaptchaInput("");
+      setOpen(false);
     } catch (error) {
       console.error("Error submitting testimonial:", error);
       toast({
