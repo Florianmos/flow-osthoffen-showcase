@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             <p className="text-muted-foreground">
               Votre DJ professionnel à Osthoffen pour tous vos événements en
-              Alsace et au-delà.
+              Alsace.
             </p>
           </div>
 
