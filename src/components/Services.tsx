@@ -34,14 +34,14 @@ const services = [
           "Location vidéoprojecteur avec écran de 2m x 2m",
           "Machine à fumée pour effets d'ambiance",
           "2 micros sans fils pour discours et animations",
-          "8 Par LED type lèche-murs avec choix de couleur selon votre décoration",
+          "8 PAR LED type lèche-murs avec choix de couleur selon votre décoration",
         ],
       },
     ],
     equipment: [
       "Colonnes LD Systems (2 Maui 28 G2 et 2 Maui 11 G2)",
       "Éclairage LED professionnel et compact",
-      "Matériel pro adapté à votre événement",
+      "Matériel professionnel adapté à votre événement",
     ],
   },
   {
@@ -57,14 +57,14 @@ const services = [
           "Location vidéoprojecteur avec écran de 2m x 2m",
           "Machine à fumée pour l'ambiance",
           "2 micros sans fils pour animations",
-          "8 Par LED type lèche-murs avec choix de couleur selon votre décoration",
+          "8 PAR LED type lèche-murs avec choix de couleur selon votre décoration",
         ],
       },
     ],
     equipment: [
       "Colonnes LD Systems (2 Maui 28 G2 et 2 Maui 11 G2)",
       "Éclairage LED professionnel et compact",
-      "Matériel pro adapté à la taille de votre événement",
+      "Matériel professionnel adapté à la taille de votre événement",
     ],
   },
   {
@@ -80,14 +80,14 @@ const services = [
           "Location vidéoprojecteur avec écran de 2m x 2m pour présentations",
           "Machine à fumée pour effets d'ambiance",
           "2 micros sans fils pour prises de parole",
-          "8 Par LED type lèche-murs avec choix de couleur selon votre charte graphique",
+          "8 PAR LED type lèche-murs avec choix de couleur",
         ],
       },
     ],
     equipment: [
       "Colonnes LD Systems (2 Maui 28 G2 et 2 Maui 11 G2)",
       "Éclairage LED professionnel et compact",
-      "Matériel pro adapté à votre événement",
+      "Matériel professionnel adapté à votre événement",
     ],
   },
 ];
@@ -147,7 +147,7 @@ const Services = () => {
             </h3>
             <p className="text-foreground/90 text-lg">
               Colonnes LD Systems, éclairage LED professionnel et compact.
-              Matériel pro adapté de 20 à 250 personnes.
+              Matériel professionnel adapté de 20 à 250 personnes.
             </p>
           </Card>
         </div>
