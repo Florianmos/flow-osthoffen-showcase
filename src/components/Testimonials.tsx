@@ -62,7 +62,7 @@ const Testimonials = () => {
       .from("testimonials")
       .select("*")
       .eq("approved", true)
-      .order("created_at", { ascending: false });
+      .order("created_at", { ascending: true });
 
     if (error) {
       console.error("Error fetching testimonials:", error);
