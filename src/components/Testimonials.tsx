@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import { AddReviewDialog } from "@/components/AddReviewDialog";
 
 const testimonials = [
   {
@@ -10,6 +11,7 @@ const testimonials = [
       "On voulait te remercier pour ton super boulot d'hier soir. C'était une une super soirée, on a adoré, tu as fait du super travail c'était vraiment génial !! Encore un grand merci pour ton accompagnement, ton écoute et tout le reste.",
     image:
       "https://cdn0.mariages.net/vendor/7506/3_2/960/jpeg/image00035_3_227506-172166798616344.jpeg",
+    photographer: "Frédéric Jarand",
   },
   {
     name: "S & P",
@@ -19,6 +21,7 @@ const testimonials = [
       "Une soirée formidable géré à la perfection par Florian, Souriant, rigoureux, efficace, il s'est adapté au planning en coordination avec les différents interlocuteurs (photographe, traiteur, témoins) Discret, il a su mettre en avant les moments importants de la soirée et nous a fait danser jusqu'au bout de la nuit. Grand merci à toi. Phip et Isa",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfXTDyyQUAkS2ChDtBz-oSivbmDEtZYqF_jA&s",
+    photographer: "Dites Cheese",
   },
   {
     name: "L & J",
@@ -102,6 +105,11 @@ const Testimonials = () => {
               <p className="text-muted-foreground leading-relaxed italic">
                 "{testimonial.comment}"
               </p>
+              {testimonial.photographer && (
+                <p className="text-xs text-muted-foreground/70 italic mt-2">
+                  Photo : {testimonial.photographer}
+                </p>
+              )}
             </Card>
           ))}
         </div>
@@ -114,12 +122,7 @@ const Testimonials = () => {
               Laissez-moi un petit mot sur votre expérience. Vos avis sont
               précieux et me motivent à donner le meilleur à chaque soirée.
             </p>
-            <a
-              href="#contact"
-              className="inline-block px-8 py-3 bg-gradient-primary text-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Laisser un avis
-            </a>
+            <AddReviewDialog />
           </Card>
         </div>
       </div>

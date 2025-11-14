@@ -42,7 +42,7 @@ const Contact = () => {
         title: "✅ Message envoyé !",
         description: "Merci pour votre message, je vous répondrai sous 24h.",
       });
-    } else if (state.errors && state.errors.length > 0) {
+    } else if (state.errors && Object.keys(state.errors).length > 0) {
       toast({
         title: "❌ Une erreur s’est produite",
         description:
