@@ -1,64 +1,82 @@
+import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 import { AddReviewDialog } from "@/components/AddReviewDialog";
+import { supabase } from "@/integrations/supabase/client";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
-const testimonials = [
-  {
-    name: "L & T",
-    event: "Mariage - 21 septembre 2025",
-    rating: 5,
-    comment:
-      "On voulait te remercier pour ton super boulot d'hier soir. C'était une une super soirée, on a adoré, tu as fait du super travail c'était vraiment génial !! Encore un grand merci pour ton accompagnement, ton écoute et tout le reste.",
-    image:
-      "https://cdn0.mariages.net/vendor/7506/3_2/960/jpeg/image00035_3_227506-172166798616344.jpeg",
-    photographer: "Frédéric Jarand",
-  },
-  {
-    name: "S & P",
-    event: "Mariage - 6 septembre 2025",
-    rating: 5,
-    comment:
-      "Une soirée formidable géré à la perfection par Florian, Souriant, rigoureux, efficace, il s'est adapté au planning en coordination avec les différents interlocuteurs (photographe, traiteur, témoins) Discret, il a su mettre en avant les moments importants de la soirée et nous a fait danser jusqu'au bout de la nuit. Grand merci à toi. Phip et Isa",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfXTDyyQUAkS2ChDtBz-oSivbmDEtZYqF_jA&s",
-    photographer: "Dites Cheese",
-  },
-  {
-    name: "L & J",
-    event: "Mariage - 30 août 2025",
-    rating: 5,
-    comment: "Merci encore Florian. C'était une magnifique soirée !",
-    image: "https://www.dalhunden.fr/images/Location%20salle.jpg",
-  },
-  {
-    name: "S & R",
-    event: "Mariage - 12 juillet 2025",
-    rating: 5,
-    comment:
-      "Merci enormément pour ta prestation samedi ! Nous te recommanderons sans hésiter !",
-    image:
-      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/5b/a4/18/hostellerie-de-l-etoile.jpg?w=1000&h=1000&s=1",
-  },
-  {
-    name: "Autocross Steinbourg / TERRE67",
-    event: "Evenment d'entreprise - 7 juin 2025",
-    rating: 5,
-    comment:
-      "Merci pour cette belle soirée, tout le monde a apprécié l'ambiance musicale. On refera appel à toi sans hésiter !",
-    image:
-      "https://bocir-medias-prod.s3.fr-par.scw.cloud/medias/bdw90XUz6T/image/affiche_20251745306374610-format1by1.jpg",
-  },
-  {
-    name: "Cédric",
-    event: "Anniversaire - 18 mai 2025",
-    rating: 5,
-    comment: "Merci ! On a passé une exellente soirée !",
-    image:
-      "https://mairie-osthoffen.fr/wp-content/uploads/2016/12/foyer-osthoffen.jpg",
-  },
-];
+interface Testimonial {
+  id: string;
+  name: string;
+  event: string;
+  rating: number;
+  comment: string;
+  image: string | null;
+  photographer: string | null;
+  created_at: string;
+}
+
+const ITEMS_PER_PAGE = 6;
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchTestimonials();
+
+    // Subscribe to realtime changes
+    const channel = supabase
+      .channel("testimonials-changes")
+      .on(
+        "postgres_changes",
+        {
+          event: "INSERT",
+          schema: "public",
+          table: "testimonials",
+          filter: "approved=eq.true",
+        },
+        (payload) => {
+          setTestimonials((prev) => [payload.new as Testimonial, ...prev]);
+          setCurrentPage(1); // Go to first page to show new testimonial
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, []);
+
+  const fetchTestimonials = async () => {
+    setLoading(true);
+    const { data, error } = await supabase
+      .from("testimonials")
+      .select("*")
+      .eq("approved", true)
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      console.error("Error fetching testimonials:", error);
+    } else {
+      setTestimonials(data || []);
+    }
+    setLoading(false);
+  };
+
+  const totalPages = Math.ceil(testimonials.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const currentTestimonials = testimonials.slice(startIndex, endIndex);
+
   return (
     <section id="testimonials" className="py-24 relative">
       <div className="container mx-auto px-4">
@@ -71,48 +89,111 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 p-6 hover-lift relative"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
+        {loading ? (
+          <div className="text-center text-muted-foreground">
+            Chargement des avis...
+          </div>
+        ) : currentTestimonials.length === 0 ? (
+          <div className="text-center text-muted-foreground">
+            Aucun avis pour le moment. Soyez le premier à laisser un avis !
+          </div>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {currentTestimonials.map((testimonial, index) => (
+                <Card
+                  key={testimonial.id}
+                  className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 p-6 hover-lift relative"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
 
-              <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-primary/30"
-                />
-                <div>
-                  <h4 className="font-semibold text-foreground">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.event}
+                  <div className="flex items-center gap-4 mb-4">
+                    {testimonial.image && (
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-14 h-14 rounded-full object-cover border-2 border-primary/30"
+                      />
+                    )}
+                    <div>
+                      <h4 className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.event}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-accent text-accent"
+                      />
+                    ))}
+                  </div>
+
+                  <p className="text-muted-foreground leading-relaxed italic">
+                    "{testimonial.comment}"
                   </p>
-                </div>
-              </div>
+                  {testimonial.photographer && (
+                    <p className="text-xs text-muted-foreground/70 italic mt-2">
+                      Photo : {testimonial.photographer}
+                    </p>
+                  )}
+                </Card>
+              ))}
+            </div>
 
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                ))}
+            {totalPages > 1 && (
+              <div className="mt-8">
+                <Pagination>
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious
+                        onClick={() =>
+                          setCurrentPage((prev) => Math.max(prev - 1, 1))
+                        }
+                        className={
+                          currentPage === 1
+                            ? "pointer-events-none opacity-50"
+                            : "cursor-pointer"
+                        }
+                      />
+                    </PaginationItem>
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                      (page) => (
+                        <PaginationItem key={page}>
+                          <PaginationLink
+                            onClick={() => setCurrentPage(page)}
+                            isActive={currentPage === page}
+                            className="cursor-pointer"
+                          >
+                            {page}
+                          </PaginationLink>
+                        </PaginationItem>
+                      )
+                    )}
+                    <PaginationItem>
+                      <PaginationNext
+                        onClick={() =>
+                          setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                        }
+                        className={
+                          currentPage === totalPages
+                            ? "pointer-events-none opacity-50"
+                            : "cursor-pointer"
+                        }
+                      />
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
               </div>
-
-              <p className="text-muted-foreground leading-relaxed italic">
-                "{testimonial.comment}"
-              </p>
-              {testimonial.photographer && (
-                <p className="text-xs text-muted-foreground/70 italic mt-2">
-                  Photo : {testimonial.photographer}
-                </p>
-              )}
-            </Card>
-          ))}
-        </div>
+            )}
+          </>
+        )}
         <div className="mt-16 text-center">
           <Card className="bg-card/50 backdrop-blur-sm border-primary/30 p-8 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
