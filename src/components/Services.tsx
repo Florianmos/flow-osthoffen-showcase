@@ -14,7 +14,7 @@ const services = [
     icon: Heart,
     title: "DJ pour Mariage",
     description:
-      "Animation musicale sur mesure pour votre mariage dans le Bas-Rhin. Accompagnement complet de la signature du contrat jusqu'au jour J avec rencontre physique, élaboration du programme et coordination avec vos prestataires.",
+      "Animation musicale sur mesure pour votre mariage dans le Bas-Rhin. Accompagnement complet de la signature du contrat jusqu'au jour J, avec rencontre physique, élaboration du programme et coordination avec vos prestataires.",
     color: "text-secondary",
     details: [
       {
@@ -46,7 +46,7 @@ const services = [
   },
   {
     icon: PartyPopper,
-    title: "Animation d'Anniversaire",
+    title: "DJ pour Anniversaire",
     description:
       "DJ pour fêtes d'anniversaire et soirées privées à Strasbourg et environs. Ambiance garantie pour vos invités de 20 à 250 personnes avec sonorisation et éclairage adaptés.",
     color: "text-primary",
