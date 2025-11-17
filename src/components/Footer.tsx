@@ -73,7 +73,7 @@ const Footer = () => {
               <li>Osthoffen, Alsace</li>
               <li>
                 <a
-                  href="tel:+33600000000"
+                  href="tel:+33610196373"
                   className="hover:text-primary transition-colors"
                 >
                   06 10 19 63 73
@@ -92,6 +92,19 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-muted-foreground">
+          <div className="flex items-center justify-center gap-4 mb-4 flex-wrap">
+            <a href="/terms" className="hover:text-primary transition-colors text-sm">
+              CGU
+            </a>
+            <span>•</span>
+            <a href="/privacy-policy" className="hover:text-primary transition-colors text-sm">
+              Politique de confidentialité
+            </a>
+            <span>•</span>
+            <a href="/legal-notice" className="hover:text-primary transition-colors text-sm">
+              Mentions légales
+            </a>
+          </div>
           <p className="flex items-center justify-center gap-2">
             © {currentYear} DJ Flo'w. Créé avec{" "}
             <Heart className="w-4 h-4 text-secondary fill-secondary" /> en
