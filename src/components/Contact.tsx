@@ -293,7 +293,7 @@ const Contact = () => {
               </p>
               <div className="text-sm text-muted-foreground">
                 <p>⏰ Lun - Ven : 9h - 19h</p>
-                <p>⏰ Samedi : 9h - 14h</p>
+                <p>⏰ Samedi : 13h - 16h</p>
                 <p className="mt-2 text-xs">Fermé du 20 déc. au 4 janv.</p>
               </div>
             </Card>
