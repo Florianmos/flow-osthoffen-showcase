@@ -159,12 +159,12 @@ export function AddReviewDialog() {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Nom *</Label>
+              <Label htmlFor="name">Pseudonyme *</Label>
               <Input
                 id="name"
                 name="name"
                 required
-                placeholder="Votre nom"
+                placeholder="Votre pseudonyme"
                 className="bg-background/50 border-border focus:border-primary"
               />
             </div>
@@ -187,16 +187,6 @@ export function AddReviewDialog() {
                 name="eventDate"
                 type="date"
                 required
-                className="bg-background/50 border-border focus:border-primary"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="photographer">Nom du photographe (optionnel)</Label>
-              <Input
-                id="photographer"
-                name="photographer"
-                placeholder="Nom du photographe"
                 className="bg-background/50 border-border focus:border-primary"
               />
             </div>
@@ -258,6 +248,18 @@ export function AddReviewDialog() {
               />
             )}
           </div>
+
+          {imageFile && (
+            <div className="space-y-2">
+              <Label htmlFor="photographer">Nom du photographe de cette image (optionnel)</Label>
+              <Input
+                id="photographer"
+                name="photographer"
+                placeholder="Nom du photographe"
+                className="bg-background/50 border-border focus:border-primary"
+              />
+            </div>
+          )}
 
           <div className="space-y-2">
             <Label htmlFor="captcha">
