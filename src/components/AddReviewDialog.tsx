@@ -11,9 +11,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Star } from "lucide-react";
+import { Star, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import blankProfile from "@/assets/blank-profile.webp";
 
 export function AddReviewDialog() {
   const [rating, setRating] = useState(5);
@@ -22,6 +23,8 @@ export function AddReviewDialog() {
   const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: 0 });
   const [captchaInput, setCaptchaInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
   const { toast } = useToast();
 
   // Generate new captcha
@@ -37,6 +40,21 @@ export function AddReviewDialog() {
     setOpen(isOpen);
     if (isOpen) {
       generateCaptcha();
+    } else {
+      setImageFile(null);
+      setImagePreview(null);
+    }
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setImageFile(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -58,6 +76,28 @@ export function AddReviewDialog() {
     setLoading(true);
 
     try {
+      let imageUrl = blankProfile; // Use default image
+
+      // Upload image if provided
+      if (imageFile) {
+        const fileExt = imageFile.name.split(".").pop();
+        const fileName = `${Math.random()}.${fileExt}`;
+        const filePath = `${fileName}`;
+
+        const { error: uploadError } = await supabase.storage
+          .from("testimonial-images")
+          .upload(filePath, imageFile);
+
+        if (uploadError) throw uploadError;
+
+        // Get public URL
+        const { data: { publicUrl } } = supabase.storage
+          .from("testimonial-images")
+          .getPublicUrl(filePath);
+
+        imageUrl = publicUrl;
+      }
+
       const { error } = await supabase.from("testimonials").insert({
         name: formData.get("name") as string,
         event: `${formData.get("eventType")} - ${new Date(
@@ -69,6 +109,7 @@ export function AddReviewDialog() {
         })}`,
         rating,
         comment: formData.get("comment") as string,
+        image: imageUrl,
         approved: true, // Auto-approve for now
       });
 
@@ -82,6 +123,8 @@ export function AddReviewDialog() {
       e.currentTarget.reset();
       setRating(5);
       setCaptchaInput("");
+      setImageFile(null);
+      setImagePreview(null);
       setOpen(false);
     } catch (error) {
       console.error("Error submitting testimonial:", error);
@@ -178,6 +221,28 @@ export function AddReviewDialog() {
               rows={4}
               className="bg-background/50 border-border focus:border-primary resize-none"
             />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="eventImage">Image de l'événement (optionnel)</Label>
+            <div className="flex items-center gap-4">
+              <Input
+                id="eventImage"
+                name="eventImage"
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="bg-background/50 border-border focus:border-primary"
+              />
+              <Upload className="w-5 h-5 text-muted-foreground" />
+            </div>
+            {imagePreview && (
+              <img
+                src={imagePreview}
+                alt="Aperçu"
+                className="w-20 h-20 rounded-lg object-cover border-2 border-primary/30"
+              />
+            )}
           </div>
 
           <div className="space-y-2">
