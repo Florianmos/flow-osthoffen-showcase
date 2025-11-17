@@ -79,7 +79,7 @@ const Gallery = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Découvrez mes dernières prestations et l'ambiance que je crée pour
-            vos événements
+            vos événements.
           </p>
         </div>
 

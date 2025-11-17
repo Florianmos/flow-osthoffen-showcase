@@ -42,7 +42,7 @@ const Partners = () => {
             <span className="text-gradient">Entreprises partenaires</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ils m'ont fait confiance pour leur événement
+            Ils m'ont fait confiance pour leur événement.
           </p>
         </div>
 

@@ -84,7 +84,7 @@ const Testimonials = () => {
             <span className="text-gradient">Avis Clients</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            La satisfaction de mes clients est ma plus grande fierté
+            La satisfaction de mes clients est ma plus grande fierté.
           </p>
         </div>
 
@@ -173,7 +173,9 @@ const Testimonials = () => {
                     <PaginationItem>
                       <PaginationNext
                         onClick={() =>
-                          setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                          setCurrentPage((prev) =>
+                            Math.min(prev + 1, totalPages)
+                          )
                         }
                         className={
                           currentPage === totalPages
