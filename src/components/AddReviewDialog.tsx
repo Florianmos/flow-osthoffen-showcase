@@ -66,7 +66,8 @@ export function AddReviewDialog() {
     if (parseInt(captchaInput) !== captcha.answer) {
       toast({
         title: "❌ Erreur",
-        description: "La réponse au captcha est incorrecte. Veuillez réessayer.",
+        description:
+          "La réponse au captcha est incorrecte. Veuillez réessayer.",
         variant: "destructive",
       });
       generateCaptcha();
@@ -91,9 +92,9 @@ export function AddReviewDialog() {
         if (uploadError) throw uploadError;
 
         // Get public URL
-        const { data: { publicUrl } } = supabase.storage
-          .from("testimonial-images")
-          .getPublicUrl(filePath);
+        const {
+          data: { publicUrl },
+        } = supabase.storage.from("testimonial-images").getPublicUrl(filePath);
 
         imageUrl = publicUrl;
       }
@@ -118,7 +119,8 @@ export function AddReviewDialog() {
 
       toast({
         title: "✅ Commentaire correctement ajouté !",
-        description: "Merci pour votre témoignage. Il apparaît maintenant sur le site.",
+        description:
+          "Merci pour votre témoignage. Il apparaît maintenant sur le site.",
       });
 
       e.currentTarget.reset();
@@ -127,15 +129,9 @@ export function AddReviewDialog() {
       setImageFile(null);
       setImagePreview(null);
       setOpen(false);
-    } catch (error) {
-      console.error("Error submitting testimonial:", error);
-      toast({
-        title: "❌ Erreur",
-        description: "Une erreur s'est produite. Veuillez réessayer.",
-        variant: "destructive",
-      });
     } finally {
       setLoading(false);
+      setOpen(false);
     }
   };
 
@@ -248,7 +244,6 @@ export function AddReviewDialog() {
               />
             )}
           </div>
-
 
           <div className="space-y-2">
             <Label htmlFor="captcha">
