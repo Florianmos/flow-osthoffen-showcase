@@ -53,13 +53,12 @@ const PrivacyPolicy = () => {
                 message
               </li>
               <li>
-                <strong>Témoignages :</strong> nom, type d'événement, date de
+                <strong>Témoignages publics :</strong> pseudonyme (pas de nom réel), type d'événement, date de
                 l'événement, note, commentaire, photo de l'événement
-                (optionnel), nom du photographe (optionnel)
+                (optionnel), nom du photographe (optionnel). Votre pseudonyme et commentaire seront affichés publiquement sur le site.
               </li>
               <li>
-                <strong>Données de navigation :</strong> adresse IP, type de
-                navigateur, pages consultées (via des cookies techniques)
+                <strong>Données de navigation :</strong> stockage local du navigateur (localStorage) pour la gestion des sessions techniques. Aucun cookie de tracking ou publicitaire n'est utilisé.
               </li>
             </ul>
           </section>
