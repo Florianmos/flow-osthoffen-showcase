@@ -110,7 +110,7 @@ export function AddReviewDialog() {
         rating,
         comment: formData.get("comment") as string,
         image: imageUrl,
-        photographer: formData.get("photographer") as string || null,
+        photographer: null,
         approved: true, // Auto-approve for now
       });
 
@@ -249,17 +249,6 @@ export function AddReviewDialog() {
             )}
           </div>
 
-          {imageFile && (
-            <div className="space-y-2">
-              <Label htmlFor="photographer">Nom du photographe de cette image (optionnel)</Label>
-              <Input
-                id="photographer"
-                name="photographer"
-                placeholder="Nom du photographe"
-                className="bg-background/50 border-border focus:border-primary"
-              />
-            </div>
-          )}
 
           <div className="space-y-2">
             <Label htmlFor="captcha">
