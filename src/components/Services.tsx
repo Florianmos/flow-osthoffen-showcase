@@ -48,7 +48,7 @@ const services = [
     icon: PartyPopper,
     title: "DJ pour Anniversaire",
     description:
-      "Animation musicale sur mesure pour votre anniversaire et soirées privées à Strasbourg et environs. J’installe une ambiance festive grâce à une sélection musicale sur mesure, une sonorisation professionnelle et un éclairage valorisant votre espace pour offrir à vos invités une soirée inoubliable.",
+      "Animation musicale pour votre anniversaire et soirées privées en Alsace. J’installe une ambiance festive grâce à une sélection musicale sur mesure, une sonorisation professionnelle et un éclairage valorisant votre espace pour offrir à vos invités une soirée inoubliable.",
     color: "text-primary",
     details: [
       {
