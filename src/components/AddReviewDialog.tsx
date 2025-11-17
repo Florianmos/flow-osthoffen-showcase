@@ -110,6 +110,7 @@ export function AddReviewDialog() {
         rating,
         comment: formData.get("comment") as string,
         image: imageUrl,
+        photographer: formData.get("photographer") as string || null,
         approved: true, // Auto-approve for now
       });
 
@@ -145,45 +146,60 @@ export function AddReviewDialog() {
           Laisser un avis
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto bg-card/95 backdrop-blur-sm border-border">
         <DialogHeader>
-          <DialogTitle>Partagez votre expérience</DialogTitle>
-          <DialogDescription>
-            Votre avis est précieux et me motive à donner le meilleur à chaque soirée.
+          <DialogTitle className="text-gradient text-2xl">
+            Partagez votre expérience 🎵
+          </DialogTitle>
+          <DialogDescription className="text-muted-foreground">
+            Votre avis compte ! Partagez votre expérience avec DJ Flo'w.
           </DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Nom ou Initiales *</Label>
-            <Input
-              id="name"
-              name="name"
-              placeholder="Ex: J & M"
-              required
-              className="bg-background/50 border-border focus:border-primary"
-            />
-          </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="eventType">Type d'événement *</Label>
-            <Input
-              id="eventType"
-              name="eventType"
-              placeholder="Ex: Mariage, Anniversaire..."
-              required
-              className="bg-background/50 border-border focus:border-primary"
-            />
-          </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="name">Nom *</Label>
+              <Input
+                id="name"
+                name="name"
+                required
+                placeholder="Votre nom"
+                className="bg-background/50 border-border focus:border-primary"
+              />
+            </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="eventDate">Date de l'événement *</Label>
-            <Input
-              id="eventDate"
-              name="eventDate"
-              type="date"
-              required
-              className="bg-background/50 border-border focus:border-primary"
-            />
+            <div className="space-y-2">
+              <Label htmlFor="eventType">Type d'événement *</Label>
+              <Input
+                id="eventType"
+                name="eventType"
+                required
+                placeholder="ex: Mariage, Anniversaire..."
+                className="bg-background/50 border-border focus:border-primary"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="eventDate">Date de l'événement *</Label>
+              <Input
+                id="eventDate"
+                name="eventDate"
+                type="date"
+                required
+                className="bg-background/50 border-border focus:border-primary"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="photographer">Nom du photographe (optionnel)</Label>
+              <Input
+                id="photographer"
+                name="photographer"
+                placeholder="Nom du photographe"
+                className="bg-background/50 border-border focus:border-primary"
+              />
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -201,25 +217,23 @@ export function AddReviewDialog() {
                   <Star
                     className={`w-8 h-8 ${
                       star <= (hoveredRating || rating)
-                        ? "fill-accent text-accent"
-                        : "text-muted-foreground"
+                        ? "fill-secondary text-secondary"
+                        : "text-muted"
                     }`}
                   />
                 </button>
               ))}
             </div>
-            <input type="hidden" name="rating" value={rating} />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="comment">Commentaire *</Label>
+            <Label htmlFor="comment">Votre témoignage *</Label>
             <Textarea
               id="comment"
               name="comment"
-              placeholder="Partagez votre expérience..."
               required
-              rows={4}
-              className="bg-background/50 border-border focus:border-primary resize-none"
+              placeholder="Partagez votre expérience avec DJ Flo'w..."
+              className="min-h-[100px] bg-background/50 border-border focus:border-primary resize-none"
             />
           </div>
 
