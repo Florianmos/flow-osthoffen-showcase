@@ -24,7 +24,7 @@ const TermsOfService = () => {
             </h2>
             <p>
               Les présentes Conditions Générales d'Utilisation (CGU) régissent
-              l'utilisation du site web florianmossler.com (ci-après "le Site"),
+              l'utilisation du site web florianmossler.fr (ci-après "le Site"),
               édité par DJ Flo'w, prestation de services de DJ professionnel
               basé à Osthoffen, Alsace.
             </p>
@@ -55,7 +55,10 @@ const TermsOfService = () => {
               <li>Consulter les prestations et tarifs</li>
               <li>Visualiser la galerie photos et vidéos</li>
               <li>Lire les témoignages clients</li>
-              <li>Soumettre des demandes de renseignements via le formulaire de contact</li>
+              <li>
+                Soumettre des demandes de renseignements via le formulaire de
+                contact
+              </li>
               <li>Déposer un avis sur les services</li>
             </ul>
           </section>
@@ -67,8 +70,8 @@ const TermsOfService = () => {
             <p>
               L'ensemble des éléments du Site (textes, images, vidéos, logos,
               graphismes, etc.) est protégé par les droits de propriété
-              intellectuelle. Toute reproduction, distribution ou utilisation non
-              autorisée est interdite sans l'accord préalable de DJ Flo'w.
+              intellectuelle. Toute reproduction, distribution ou utilisation
+              non autorisée est interdite sans l'accord préalable de DJ Flo'w.
             </p>
           </section>
 
@@ -83,7 +86,10 @@ const TermsOfService = () => {
             <ul className="list-disc list-inside ml-4 mt-2 space-y-2">
               <li>Que le contenu est authentique et véridique</li>
               <li>Que vous disposez des droits sur les photos partagées</li>
-              <li>Que le contenu ne contient rien d'illégal, diffamatoire ou offensant</li>
+              <li>
+                Que le contenu ne contient rien d'illégal, diffamatoire ou
+                offensant
+              </li>
             </ul>
             <p className="mt-4">
               DJ Flo'w se réserve le droit de modérer, modifier ou supprimer
@@ -141,7 +147,8 @@ const TermsOfService = () => {
             </h2>
             <p>
               Pour toute question concernant ces CGU, vous pouvez nous contacter
-              à l'adresse : fm.mossler@gmail.com ou par téléphone au 06 10 19 63 73.
+              à l'adresse : fm.mossler@gmail.com ou par téléphone au 06 10 19 63
+              73.
             </p>
           </section>
 
