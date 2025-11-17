@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
               DJ Flo'w accorde une grande importance à la protection de vos
               données personnelles. Cette politique de confidentialité explique
               comment nous collectons, utilisons et protégeons vos informations
-              lorsque vous utilisez notre site web florianmossler.com.
+              lorsque vous utilisez notre site web florianmossler.fr.
             </p>
           </section>
 
@@ -37,7 +37,8 @@ const PrivacyPolicy = () => {
             <p>
               Le responsable du traitement des données est DJ Flo'w, basé à
               Osthoffen, Alsace. Pour toute question relative à vos données,
-              vous pouvez nous contacter à fm.mossler@gmail.com ou au 06 10 19 63 73.
+              vous pouvez nous contacter à fm.mossler@gmail.com ou au 06 10 19
+              63 73.
             </p>
           </section>
 
@@ -53,12 +54,17 @@ const PrivacyPolicy = () => {
                 message
               </li>
               <li>
-                <strong>Témoignages publics :</strong> pseudonyme (pas de nom réel), type d'événement, date de
-                l'événement, note, commentaire, photo de l'événement
-                (optionnel), nom du photographe (optionnel). Votre pseudonyme et commentaire seront affichés publiquement sur le site.
+                <strong>Témoignages publics :</strong> pseudonyme (pas de nom
+                réel), type d'événement, date de l'événement, note, commentaire,
+                photo de l'événement (optionnel), nom du photographe
+                (optionnel). Votre pseudonyme et commentaire seront affichés
+                publiquement sur le site.
               </li>
               <li>
-                <strong>Données de navigation :</strong> stockage local du navigateur (localStorage) pour la gestion des sessions techniques. Aucun cookie de tracking ou publicitaire n'est utilisé.
+                <strong>Données de navigation :</strong> stockage local du
+                navigateur (localStorage) pour la gestion des sessions
+                techniques. Aucun cookie de tracking ou publicitaire n'est
+                utilisé.
               </li>
             </ul>
           </section>
@@ -82,9 +88,14 @@ const PrivacyPolicy = () => {
             </h2>
             <p>Le traitement de vos données repose sur :</p>
             <ul className="list-disc list-inside ml-4 mt-2 space-y-2">
-              <li>Votre consentement (pour les témoignages et le formulaire de contact)</li>
+              <li>
+                Votre consentement (pour les témoignages et le formulaire de
+                contact)
+              </li>
               <li>L'intérêt légitime (pour l'amélioration du service)</li>
-              <li>L'exécution d'un contrat (pour les prestations commandées)</li>
+              <li>
+                L'exécution d'un contrat (pour les prestations commandées)
+              </li>
             </ul>
           </section>
 
@@ -98,7 +109,9 @@ const PrivacyPolicy = () => {
             </p>
             <ul className="list-disc list-inside ml-4 mt-2 space-y-2">
               <li>Demandes de contact : 3 ans après le dernier contact</li>
-              <li>Témoignages : tant que vous ne demandez pas leur suppression</li>
+              <li>
+                Témoignages : tant que vous ne demandez pas leur suppression
+              </li>
               <li>Données de navigation : 13 mois maximum</li>
             </ul>
           </section>
@@ -110,8 +123,8 @@ const PrivacyPolicy = () => {
             <p>
               Vos données sont uniquement accessibles par DJ Flo'w et ne sont
               jamais vendues à des tiers. Nous pouvons partager vos données avec
-              des prestataires techniques (hébergement, service d'envoi d'e-mails)
-              qui agissent en notre nom et sous notre responsabilité.
+              des prestataires techniques (hébergement, service d'envoi
+              d'e-mails) qui agissent en notre nom et sous notre responsabilité.
             </p>
           </section>
 
@@ -169,8 +182,9 @@ const PrivacyPolicy = () => {
             </h2>
             <p>
               Cette politique de confidentialité peut être mise à jour
-              périodiquement. Nous vous encourageons à la consulter régulièrement.
-              La date de dernière mise à jour est indiquée en bas de page.
+              périodiquement. Nous vous encourageons à la consulter
+              régulièrement. La date de dernière mise à jour est indiquée en bas
+              de page.
             </p>
           </section>
 
