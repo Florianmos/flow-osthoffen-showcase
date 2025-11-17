@@ -152,7 +152,7 @@ const Contact = () => {
                 </label>
                 <Input
                   required
-                  placeholder="Mariage, Anniversaire, Corporate..."
+                  placeholder="Mariage, Anniversaire, Soirée d'entreprise..."
                   id="typeevenement"
                   name="typeevenement"
                   className="bg-background/50 border-border focus:border-primary"
@@ -185,7 +185,7 @@ const Contact = () => {
                   required
                   id="message"
                   name="message"
-                  placeholder="Parlez-moi de votre projet..."
+                  placeholder="Parlez-moi de votre événement..."
                   rows={5}
                   className="bg-background/50 border-border focus:border-primary resize-none"
                 />
