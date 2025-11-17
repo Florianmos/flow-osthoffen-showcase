@@ -22,15 +22,23 @@ const LegalNotice = () => {
             <h2 className="text-2xl font-semibold text-foreground mb-4">
               1. Éditeur du site
             </h2>
-            <p>
-              Le site web florianmossler.com est édité par :
-            </p>
+            <p>Le site web florianmossler.fr est édité par :</p>
             <ul className="list-none ml-4 mt-2 space-y-2">
-              <li><strong>Nom commercial :</strong> DJ Flo'w</li>
-              <li><strong>Responsable :</strong> Florian Mossler</li>
-              <li><strong>Adresse :</strong> Osthoffen, Alsace, France</li>
-              <li><strong>Téléphone :</strong> 06 10 19 63 73</li>
-              <li><strong>E-mail :</strong> fm.mossler@gmail.com</li>
+              <li>
+                <strong>Nom commercial :</strong> DJ Flo'w
+              </li>
+              <li>
+                <strong>Responsable :</strong> Florian Mossler
+              </li>
+              <li>
+                <strong>Adresse :</strong> Osthoffen, Alsace, France
+              </li>
+              <li>
+                <strong>Téléphone :</strong> 06 10 19 63 73
+              </li>
+              <li>
+                <strong>E-mail :</strong> fm.mossler@gmail.com
+              </li>
             </ul>
           </section>
 
@@ -38,13 +46,26 @@ const LegalNotice = () => {
             <h2 className="text-2xl font-semibold text-foreground mb-4">
               2. Hébergement
             </h2>
-            <p>
-              Le site est hébergé par :
-            </p>
+            <p>Le site est hébergé par :</p>
             <ul className="list-none ml-4 mt-2 space-y-2">
-              <li><strong>Hébergeur :</strong> Hostinger International Ltd.</li>
-              <li><strong>Adresse :</strong> 61 Lordou Vironos Street, 6023 Larnaca, Chypre</li>
-              <li><strong>Site web :</strong> <a href="https://www.hostinger.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.hostinger.fr</a></li>
+              <li>
+                <strong>Hébergeur :</strong> Hostinger International Ltd.
+              </li>
+              <li>
+                <strong>Adresse :</strong> 61 Lordou Vironos Street, 6023
+                Larnaca, Chypre
+              </li>
+              <li>
+                <strong>Site web :</strong>{" "}
+                <a
+                  href="https://www.hostinger.fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  www.hostinger.fr
+                </a>
+              </li>
             </ul>
           </section>
 
@@ -78,11 +99,12 @@ const LegalNotice = () => {
               5. Crédits photos et vidéos
             </h2>
             <p>
-              Les photographies et vidéos présentes sur le site sont la propriété
-              de DJ Flo'w ou ont été utilisées avec l'autorisation de leurs
-              auteurs. Le nom du photographe est mentionné lorsque celui-ci est
-              connu. Si vous êtes l'auteur d'une photographie et souhaitez qu'elle
-              soit créditée ou retirée, merci de nous contacter.
+              Les photographies et vidéos présentes sur le site sont la
+              propriété de DJ Flo'w ou ont été utilisées avec l'autorisation de
+              leurs auteurs. Le nom du photographe est mentionné lorsque
+              celui-ci est connu. Si vous êtes l'auteur d'une photographie et
+              souhaitez qu'elle soit créditée ou retirée, merci de nous
+              contacter.
             </p>
           </section>
 
@@ -94,9 +116,13 @@ const LegalNotice = () => {
               Les données personnelles collectées sur ce site font l'objet d'un
               traitement conforme au Règlement Général sur la Protection des
               Données (RGPD). Pour plus d'informations, consultez notre{" "}
-              <Link to="/privacy-policy" className="text-primary hover:underline">
+              <Link
+                to="/privacy-policy"
+                className="text-primary hover:underline"
+              >
                 Politique de Confidentialité
-              </Link>.
+              </Link>
+              .
             </p>
           </section>
 
@@ -107,9 +133,13 @@ const LegalNotice = () => {
             <p>
               Le site utilise des cookies techniques nécessaires à son bon
               fonctionnement. Pour plus d'informations, consultez notre{" "}
-              <Link to="/privacy-policy" className="text-primary hover:underline">
+              <Link
+                to="/privacy-policy"
+                className="text-primary hover:underline"
+              >
                 Politique de Confidentialité
-              </Link>.
+              </Link>
+              .
             </p>
           </section>
 
@@ -119,11 +149,11 @@ const LegalNotice = () => {
             </h2>
             <p>
               DJ Flo'w s'efforce de fournir des informations exactes et à jour
-              sur ce site. Toutefois, DJ Flo'w ne peut garantir l'exactitude,
-              la précision ou l'exhaustivité des informations mises à
-              disposition. En conséquence, DJ Flo'w décline toute responsabilité
-              pour toute imprécision, inexactitude ou omission portant sur des
-              informations disponibles sur ce site.
+              sur ce site. Toutefois, DJ Flo'w ne peut garantir l'exactitude, la
+              précision ou l'exhaustivité des informations mises à disposition.
+              En conséquence, DJ Flo'w décline toute responsabilité pour toute
+              imprécision, inexactitude ou omission portant sur des informations
+              disponibles sur ce site.
             </p>
             <p className="mt-4">
               DJ Flo'w ne pourra être tenu responsable des dommages directs ou
