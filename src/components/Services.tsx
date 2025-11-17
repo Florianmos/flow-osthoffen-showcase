@@ -48,7 +48,7 @@ const services = [
     icon: PartyPopper,
     title: "DJ pour Anniversaire",
     description:
-      "Animation musicale sur mesure pour votre anniversaire et soirées privées à Strasbourg et environs. Ambiance garantie pour vos invités de 20 à 250 personnes avec sonorisation et éclairage adaptés.",
+      "Animation musicale sur mesure pour votre anniversaire et soirées privées à Strasbourg et environs. J’installe une ambiance festive grâce à une sélection musicale sur mesure, une sonorisation professionnelle et un éclairage valorisant votre espace pour offrir à vos invités une soirée inoubliable.",
     color: "text-primary",
     details: [
       {
@@ -101,8 +101,9 @@ const Services = () => {
             <span className="text-gradient">Mes Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            DJ mobile généraliste basé aux alentours de Strasbourg. Je m'adapte
-            à chaque événement pour créer une expérience mémorable.
+            Je m'appelle Florian, j'ai 28 ans et je suis DJ mobile généraliste
+            depuis plusieurs années. Je m'adapte à chaque événement pour créer
+            une expérience mémorable.
           </p>
         </div>
 
