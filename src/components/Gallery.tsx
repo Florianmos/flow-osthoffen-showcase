@@ -29,6 +29,7 @@ const Gallery = () => {
       id: 2,
       url: photo2,
       alt: "Mariage - L & T",
+      photographe: "Frédéric Jarand",
     },
     {
       id: 3,
@@ -39,11 +40,13 @@ const Gallery = () => {
       id: 4,
       url: photo4,
       alt: "Mariage - Salle festive Ernolsheim les Savernes",
+      photographe: "Dites Cheese",
     },
     {
       id: 5,
       url: photo3,
       alt: "Mariage - I & P",
+      photographe: "Dites Cheese",
     },
     { id: 6, url: photo6, alt: "Mariage - A & G - Rome Philippe Geispolsheim" },
   ];
@@ -117,6 +120,12 @@ const Gallery = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                       <p className="text-foreground font-semibold">
                         {photo.alt}
+                        <br />
+                        {photo.photographe && (
+                          <span className="photographe">
+                            Photographe : {photo.photographe}
+                          </span>
+                        )}
                       </p>
                     </div>
                   </div>

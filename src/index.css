@@ -123,3 +123,9 @@ All colors MUST be HSL.
         bottom: 25px;
         width: calc(100% - 3rem);
     }
+    .photographe{
+  width: 100%;
+  font-size: 0.75em;
+  color: #ffffff9e;
+  font-style: italic !important;
+}

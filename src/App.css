@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.photographe{
+  width: 100%;
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic !important;
+}

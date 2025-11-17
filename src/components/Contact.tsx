@@ -5,7 +5,15 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Facebook, Instagram, Music } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Instagram,
+  Music,
+  Linkedin,
+} from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useForm, ValidationError } from "@formspree/react";
 
@@ -263,22 +271,28 @@ const Contact = () => {
               </h3>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.pagesjaunes.fr/pros/63816124"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
+                >
+                  <Phone className="w-6 h-6 text-foreground" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/dj-flo-w-florian-mossler"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
+                >
+                  <Linkedin className="w-6 h-6 text-foreground" />
+                </a>
+                <a
+                  href="https://www.messenger.com/t/100007795607930"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
                 >
                   <Facebook className="w-6 h-6 text-foreground" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
-                >
-                  <Instagram className="w-6 h-6 text-foreground" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
-                >
-                  <Music className="w-6 h-6 text-foreground" />
                 </a>
               </div>
             </Card>
