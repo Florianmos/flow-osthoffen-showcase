@@ -19,7 +19,6 @@ interface Testimonial {
   rating: number;
   comment: string;
   image: string | null;
-  photographer: string | null;
   created_at: string;
 }
 
@@ -138,11 +137,6 @@ const Testimonials = () => {
                   <p className="text-muted-foreground leading-relaxed italic">
                     "{testimonial.comment}"
                   </p>
-                  {testimonial.photographer && (
-                    <p className="text-xs text-muted-foreground/70 italic mt-2">
-                      Photo : {testimonial.photographer}
-                    </p>
-                  )}
                 </Card>
               ))}
             </div>
