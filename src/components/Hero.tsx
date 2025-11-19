@@ -39,9 +39,9 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">
+            <strong className="text-sm text-muted-foreground">
               DJ Professionnel secteur Alsace
-            </span>
+            </strong>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gradient glow-text mb-6">
