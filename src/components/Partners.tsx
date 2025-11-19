@@ -1,35 +1,41 @@
 import { Card } from "@/components/ui/card";
+import rewentsLogo from "@/assets/logo/rewents.jfif";
+import paysRhenanLogo from "@/assets/logo/logopaysrhenan.png";
+import campingLogo from "@/assets/logo/campinglogo.jfif";
+import fabeonLogo from "@/assets/logo/logofabeon.png";
+import paddockLogo from "@/assets/logo/paddocklogo.png";
+import ffsaLogo from "@/assets/logo/logoffsa.png";
 
 const partners = [
   {
     name: "DJ R-ewent's",
     type: "Associé et partenaire DJ de confiance",
-    logo: "assets/logo/rewents.jfif",
+    logo: rewentsLogo,
   },
   {
     name: "Office de tourisme du Pays Rhénan",
     type: "Etablissement Public",
-    logo: "/assets/logo/logopaysrhenan.png",
+    logo: paysRhenanLogo,
   },
   {
     name: "Plage du Staedly",
     type: "Camping",
-    logo: "/assets/logo/campinglogo.jfif",
+    logo: campingLogo,
   },
   {
     name: "Fabéon",
     type: "Centre de formation",
-    logo: "/assets/logo/logofabeon.png",
+    logo: fabeonLogo,
   },
   {
     name: "Paddock AcademY",
     type: "Innovation",
-    logo: "/assets/logo/paddocklogo.png",
+    logo: paddockLogo,
   },
   {
     name: "FFSA - Terre 67",
     type: "Club Autocross Steinbourg",
-    logo: "/assets/logo/logoffsa.png",
+    logo: ffsaLogo,
   },
 ];
 
