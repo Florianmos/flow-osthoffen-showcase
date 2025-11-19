@@ -129,3 +129,6 @@ All colors MUST be HSL.
   color: #ffffff9e;
   font-style: italic !important;
 }
+strong{
+      font-weight: 400 !important;
+}
