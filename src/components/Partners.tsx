@@ -9,27 +9,27 @@ const partners = [
   {
     name: "Office de tourisme du Pays Rhénan",
     type: "Etablissement Public",
-    logo: "assets/logo/logopaysrhenan.png",
+    logo: "/assets/logo/logopaysrhenan.png",
   },
   {
     name: "Plage du Staedly",
     type: "Camping",
-    logo: "assets/logo/campinglogo.jfif",
+    logo: "/assets/logo/campinglogo.jfif",
   },
   {
     name: "Fabéon",
     type: "Centre de formation",
-    logo: "assets/logo/logofabeon.png",
+    logo: "/assets/logo/logofabeon.png",
   },
   {
     name: "Paddock AcademY",
     type: "Innovation",
-    logo: "assets/logo/paddocklogo.png",
+    logo: "/assets/logo/paddocklogo.png",
   },
   {
     name: "FFSA - Terre 67",
     type: "Club Autocross Steinbourg",
-    logo: "assets/logo/logoffsa.png",
+    logo: "/assets/logo/logoffsa.png",
   },
 ];
 
