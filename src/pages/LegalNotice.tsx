@@ -25,7 +25,7 @@ const LegalNotice = () => {
             <p>Le site web florianmossler.fr est édité par :</p>
             <ul className="list-none ml-4 mt-2 space-y-2">
               <li>
-                <strong>Nom commercial :</strong> DJ Flo'w
+                <strong>Nom commercial :</strong> DJ FLO'W
               </li>
               <li>
                 <strong>Responsable :</strong> Florian Mossler
@@ -100,7 +100,7 @@ const LegalNotice = () => {
             </h2>
             <p>
               Les photographies et vidéos présentes sur le site sont la
-              propriété de DJ Flo'w ou ont été utilisées avec l'autorisation de
+              propriété de DJ FLO'W ou ont été utilisées avec l'autorisation de
               leurs auteurs. Le nom du photographe est mentionné lorsque
               celui-ci est connu. Si vous êtes l'auteur d'une photographie et
               souhaitez qu'elle soit créditée ou retirée, merci de nous
@@ -148,15 +148,15 @@ const LegalNotice = () => {
               8. Limitation de responsabilité
             </h2>
             <p>
-              DJ Flo'w s'efforce de fournir des informations exactes et à jour
-              sur ce site. Toutefois, DJ Flo'w ne peut garantir l'exactitude, la
+              DJ FLO'W s'efforce de fournir des informations exactes et à jour
+              sur ce site. Toutefois, DJ FLO'W ne peut garantir l'exactitude, la
               précision ou l'exhaustivité des informations mises à disposition.
-              En conséquence, DJ Flo'w décline toute responsabilité pour toute
+              En conséquence, DJ FLO'W décline toute responsabilité pour toute
               imprécision, inexactitude ou omission portant sur des informations
               disponibles sur ce site.
             </p>
             <p className="mt-4">
-              DJ Flo'w ne pourra être tenu responsable des dommages directs ou
+              DJ FLO'W ne pourra être tenu responsable des dommages directs ou
               indirects résultant de l'utilisation de ce site ou de
               l'impossibilité d'y accéder.
             </p>

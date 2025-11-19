@@ -1,4 +1,4 @@
-# robots.txt pour DJ Flo'w - DJ Professionnel Bas-Rhin
+# robots.txt pour DJ FLO'W - DJ Professionnel en Alsace
 User-agent: Googlebot
 Allow: /
 

@@ -25,7 +25,7 @@ const TermsOfService = () => {
             <p>
               Les présentes Conditions Générales d'Utilisation (CGU) régissent
               l'utilisation du site web florianmossler.fr (ci-après "le Site"),
-              édité par DJ Flo'w, prestation de services de DJ professionnel
+              édité par DJ FLO'W, prestation de services de DJ professionnel
               basé à Osthoffen, Alsace.
             </p>
           </section>
@@ -71,7 +71,7 @@ const TermsOfService = () => {
               L'ensemble des éléments du Site (textes, images, vidéos, logos,
               graphismes, etc.) est protégé par les droits de propriété
               intellectuelle. Toute reproduction, distribution ou utilisation
-              non autorisée est interdite sans l'accord préalable de DJ Flo'w.
+              non autorisée est interdite sans l'accord préalable de DJ FLO'W.
             </p>
           </section>
 
@@ -92,7 +92,7 @@ const TermsOfService = () => {
               </li>
             </ul>
             <p className="mt-4">
-              DJ Flo'w se réserve le droit de modérer, modifier ou supprimer
+              DJ FLO'W se réserve le droit de modérer, modifier ou supprimer
               tout avis inapproprié sans préavis.
             </p>
           </section>
@@ -102,8 +102,8 @@ const TermsOfService = () => {
               6. Limitation de responsabilité
             </h2>
             <p>
-              DJ Flo'w s'efforce de maintenir le Site accessible et à jour, mais
-              ne peut garantir une disponibilité continue. DJ Flo'w ne saurait
+              DJ FLO'W s'efforce de maintenir le Site accessible et à jour, mais
+              ne peut garantir une disponibilité continue. DJ FLO'W ne saurait
               être tenu responsable des dommages directs ou indirects résultant
               de l'utilisation ou de l'impossibilité d'utiliser le Site.
             </p>
@@ -114,7 +114,7 @@ const TermsOfService = () => {
               7. Liens hypertextes
             </h2>
             <p>
-              Le Site peut contenir des liens vers des sites tiers. DJ Flo'w
+              Le Site peut contenir des liens vers des sites tiers. DJ FLO'W
               n'est pas responsable du contenu de ces sites externes.
             </p>
           </section>
@@ -124,7 +124,7 @@ const TermsOfService = () => {
               8. Modification des CGU
             </h2>
             <p>
-              DJ Flo'w se réserve le droit de modifier les présentes CGU à tout
+              DJ FLO'W se réserve le droit de modifier les présentes CGU à tout
               moment. Les modifications prendront effet dès leur publication sur
               le Site.
             </p>

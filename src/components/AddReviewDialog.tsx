@@ -148,7 +148,7 @@ export function AddReviewDialog() {
             Partagez votre expérience 🎵
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
-            Votre avis compte ! Partagez votre expérience avec DJ Flo'w.
+            Votre avis compte ! Partagez votre expérience avec DJ FLO'W.
           </DialogDescription>
         </DialogHeader>
 
@@ -218,7 +218,7 @@ export function AddReviewDialog() {
               id="comment"
               name="comment"
               required
-              placeholder="Partagez votre expérience avec DJ Flo'w..."
+              placeholder="Partagez votre expérience avec DJ FLO'W..."
               className="min-h-[100px] bg-background/50 border-border focus:border-primary resize-none"
             />
           </div>

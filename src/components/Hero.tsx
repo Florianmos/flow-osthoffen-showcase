@@ -54,7 +54,7 @@ const Hero = () => {
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Animation musicale sur mesure pour mariages, anniversaires et
-            soirées d'entreprise. Sonorisation professionnelle de 20 à 250
+            soirées d'entreprise. Sonorisation professionnelle jusqu'à 250
             personnes. Déplacements jusqu'à 1h autour de Strasbourg.
           </p>
 

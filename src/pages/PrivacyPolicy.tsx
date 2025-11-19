@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
               1. Introduction
             </h2>
             <p>
-              DJ Flo'w accorde une grande importance à la protection de vos
+              DJ FLO'W accorde une grande importance à la protection de vos
               données personnelles. Cette politique de confidentialité explique
               comment nous collectons, utilisons et protégeons vos informations
               lorsque vous utilisez notre site web florianmossler.fr.
@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
               2. Responsable du traitement
             </h2>
             <p>
-              Le responsable du traitement des données est DJ Flo'w, basé à
+              Le responsable du traitement des données est DJ FLO'W, basé à
               Osthoffen, Alsace. Pour toute question relative à vos données,
               vous pouvez nous contacter à fm.mossler@gmail.com ou au 06 10 19
               63 73.
@@ -121,7 +121,7 @@ const PrivacyPolicy = () => {
               7. Destinataires des données
             </h2>
             <p>
-              Vos données sont uniquement accessibles par DJ Flo'w et ne sont
+              Vos données sont uniquement accessibles par DJ FLO'W et ne sont
               jamais vendues à des tiers. Nous pouvons partager vos données avec
               des prestataires techniques (hébergement, service d'envoi
               d'e-mails) qui agissent en notre nom et sous notre responsabilité.
