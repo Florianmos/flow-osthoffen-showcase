@@ -4,32 +4,32 @@ const partners = [
   {
     name: "DJ R-ewent's",
     type: "Associé et partenaire DJ de confiance",
-    logo: "src/assets/logo/rewents.jfif",
+    logo: "assets/logo/rewents.jfif",
   },
   {
     name: "Office de tourisme du Pays Rhénan",
     type: "Etablissement Public",
-    logo: "src/assets/logo/logopaysrhenan.png",
+    logo: "assets/logo/logopaysrhenan.png",
   },
   {
     name: "Plage du Staedly",
     type: "Camping",
-    logo: "src/assets/logo/campinglogo.jfif",
+    logo: "assets/logo/campinglogo.jfif",
   },
   {
     name: "Fabéon",
     type: "Centre de formation",
-    logo: "src/assets/logo/logofabeon.png",
+    logo: "assets/logo/logofabeon.png",
   },
   {
     name: "Paddock AcademY",
     type: "Innovation",
-    logo: "src/assets/logo/paddocklogo.png",
+    logo: "assets/logo/paddocklogo.png",
   },
   {
     name: "FFSA - Terre 67",
     type: "Club Autocross Steinbourg",
-    logo: "src/assets/logo/logoffsa.png",
+    logo: "assets/logo/logoffsa.png",
   },
 ];
 
