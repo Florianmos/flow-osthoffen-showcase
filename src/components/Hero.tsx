@@ -48,9 +48,9 @@ const Hero = () => {
             DJ FLO'W
           </h1>
 
-          <p className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto">
             DJ Mobile Généraliste - Strasbourg et Bas-Rhin
-          </p>
+          </h2>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Animation musicale sur mesure pour mariages, anniversaires et
