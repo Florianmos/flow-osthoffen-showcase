@@ -20,6 +20,7 @@ export type Database = {
           comment: string
           created_at: string
           event: string
+          event_date: string | null
           id: string
           image: string | null
           name: string
@@ -31,6 +32,7 @@ export type Database = {
           comment: string
           created_at?: string
           event: string
+          event_date?: string | null
           id?: string
           image?: string | null
           name: string
@@ -42,6 +44,7 @@ export type Database = {
           comment?: string
           created_at?: string
           event?: string
+          event_date?: string | null
           id?: string
           image?: string | null
           name?: string
