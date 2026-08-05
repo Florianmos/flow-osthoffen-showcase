@@ -1,19 +1,28 @@
 import { Sparkles, Shield, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import coldSparks from "@/assets/cold-sparks-2.jpg.asset.json";
+import coldSparksA from "@/assets/cold-sparks-a.jpg.asset.json";
+import coldSparksB from "@/assets/cold-sparks-b.jpg.asset.json";
 
 const ColdSparks = () => {
   return (
     <section id="etincelles-froides" className="py-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all card-glow px-6">
-            <img
-              src={coldSparks.url}
-              alt="Machines à étincelles froides en fonctionnement lors d'une soirée"
-              loading="lazy"
-              className="w-full h-[320px] md:h-[380px] object-cover rounded-lg"
-            />
+          <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all card-glow p-4">
+            <div className="grid grid-cols-2 gap-4 items-center">
+              <img
+                src={coldSparksA.url}
+                alt="Machine à étincelles froides en intérieur sous les arches d'une salle de réception"
+                loading="lazy"
+                className="w-full h-auto object-contain rounded-lg"
+              />
+              <img
+                src={coldSparksB.url}
+                alt="Deux machines à étincelles froides en extérieur lors d'une soirée"
+                loading="lazy"
+                className="w-full h-auto object-contain rounded-lg"
+              />
+            </div>
           </Card>
 
           <div>
