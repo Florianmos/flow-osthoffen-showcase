@@ -1,0 +1,70 @@
+# ---------------------------------------------------------------
+# DJ FLO'W - Configuration Apache (Hostinger)
+# ---------------------------------------------------------------
+
+# 1) Autorisation explicite des crawlers IA / SEO (anti 429)
+#    On marque les bots légitimes pour les exclure de tout blocage.
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase User-Agent "GPTBot"        good_bot
+  SetEnvIfNoCase User-Agent "OAI-SearchBot" good_bot
+  SetEnvIfNoCase User-Agent "ChatGPT-User"  good_bot
+  SetEnvIfNoCase User-Agent "PerplexityBot" good_bot
+  SetEnvIfNoCase User-Agent "ClaudeBot"     good_bot
+  SetEnvIfNoCase User-Agent "Claude-Web"    good_bot
+  SetEnvIfNoCase User-Agent "Applebot"      good_bot
+  SetEnvIfNoCase User-Agent "Googlebot"     good_bot
+  SetEnvIfNoCase User-Agent "Bingbot"       good_bot
+</IfModule>
+
+<IfModule mod_authz_core.c>
+  <RequireAny>
+    Require all granted
+    Require env good_bot
+  </RequireAny>
+</IfModule>
+
+# Ne pas appliquer de limitation de débit aux bots identifiés
+<IfModule mod_ratelimit.c>
+  <If "! reqenv('good_bot') == ''">
+    SetOutputFilter ""
+  </If>
+</IfModule>
+
+<IfModule mod_evasive20.c>
+  DOSWhitelistUserAgent GPTBot
+  DOSWhitelistUserAgent OAI-SearchBot
+  DOSWhitelistUserAgent ChatGPT-User
+</IfModule>
+
+# 2) Routage SPA React (toutes les routes -> index.html)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Ne jamais rediriger les fichiers réels
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # robots.txt et sitemap servis directement
+  RewriteRule ^(robots\.txt|sitemap\.xml|favicon\.ico)$ - [L]
+
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# 3) Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# 4) Cache navigateur
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
