@@ -1,7 +1,7 @@
 import { Sparkles, Shield, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
-import coldSparksB from "@/assets/gallery/spark2.jpg";
+import coldSparksB from "@/assets/gallery/spark2.jpeg";
 import coldSparksA from "@/assets/gallery/spark1.jpg";
 
 const ColdSparks = () => {
