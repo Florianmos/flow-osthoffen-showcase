@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import ColdSparks from "@/components/ColdSparks";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Partners from "@/components/Partners";
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Hero />
       <Services />
+      <ColdSparks />
       <Gallery />
       <Testimonials />
       <Partners />
