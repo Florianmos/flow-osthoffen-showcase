@@ -1,7 +1,8 @@
 import { Sparkles, Shield, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import coldSparksA from "@/assets/cold-sparks-a2.jpg.asset.json";
-import coldSparksB from "@/assets/cold-sparks-b.jpg.asset.json";
+
+import coldSparksB from "@/assets/gallery/spark2.jpg";
+import coldSparksA from "@/assets/gallery/spark1.jpg";
 
 const ColdSparks = () => {
   return (
@@ -11,13 +12,13 @@ const ColdSparks = () => {
           <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all card-glow p-4">
             <div className="grid grid-cols-2 gap-4 items-center">
               <img
-                src={coldSparksA.url}
+                src={coldSparksA}
                 alt="Machine à étincelles froides en intérieur sous les arches d'une salle de réception"
                 loading="lazy"
                 className="w-full h-auto object-contain rounded-lg"
               />
               <img
-                src={coldSparksB.url}
+                src={coldSparksB}
                 alt="Deux machines à étincelles froides en extérieur lors d'une soirée"
                 loading="lazy"
                 className="w-full h-auto object-contain rounded-lg"
