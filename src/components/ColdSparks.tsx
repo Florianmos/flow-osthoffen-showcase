@@ -1,18 +1,18 @@
 import { Sparkles, Shield, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import coldSparks from "@/assets/cold-sparks.jpg.asset.json";
+import coldSparks from "@/assets/cold-sparks-2.jpg.asset.json";
 
 const ColdSparks = () => {
   return (
     <section id="etincelles-froides" className="py-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all card-glow">
+          <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all card-glow px-6">
             <img
               src={coldSparks.url}
               alt="Machines à étincelles froides en fonctionnement lors d'une soirée"
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-[320px] md:h-[380px] object-cover rounded-lg"
             />
           </Card>
 
@@ -45,13 +45,6 @@ const ColdSparks = () => {
                 <span className="text-foreground/90">
                   Étincelles non brûlantes, utilisables en intérieur comme en
                   extérieur.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Sparkles className="w-5 h-5 text-primary mt-1 shrink-0" />
-                <span className="text-foreground/90">
-                  Déclenchement synchronisé avec la musique pour un effet
-                  garanti.
                 </span>
               </li>
             </ul>
