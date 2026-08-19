@@ -46,6 +46,10 @@ const Hero = () => {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gradient glow-text mb-6">
             DJ FLO'W
+            <span className="sr-only">
+              {" "}
+              — DJ professionnel pour mariages et événements en Alsace
+            </span>
           </h1>
 
           <h2 className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,10 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-background via-background to-primary/5">
+      <Helmet>
+        <title>Page introuvable — DJ FLO'W</title>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <div className="text-center px-4">
         <Music className="w-24 h-24 text-primary/30 mx-auto mb-8 animate-pulse" />
         <h1 className="mb-4 text-8xl font-bold text-gradient">404</h1>
