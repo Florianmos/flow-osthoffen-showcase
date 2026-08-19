@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -5,6 +6,17 @@ import { Link } from "react-router-dom";
 const LegalNotice = () => {
   return (
     <div className="min-h-screen bg-background py-12 px-4">
+      <Helmet>
+        <title>Mentions Légales — DJ FLO'W</title>
+        <meta name="description" content="Mentions légales du site DJ FLO'W — Florian Mossler, DJ professionnel à Osthoffen (Bas-Rhin)." />
+        <link rel="canonical" href="https://florianmossler.fr/legal-notice" />
+        <meta property="og:title" content="Mentions Légales — DJ FLO'W" />
+        <meta property="og:description" content="Mentions légales du site DJ FLO'W — Florian Mossler, DJ professionnel à Osthoffen (Bas-Rhin)." />
+        <meta property="og:url" content="https://florianmossler.fr/legal-notice" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Mentions Légales — DJ FLO'W" />
+        <meta name="twitter:description" content="Mentions légales du site DJ FLO'W — Florian Mossler, DJ professionnel à Osthoffen (Bas-Rhin)." />
+      </Helmet>
       <div className="container max-w-4xl mx-auto">
         <Link to="/">
           <Button variant="outline" className="mb-8">
@@ -14,7 +26,7 @@ const LegalNotice = () => {
         </Link>
 
         <h1 className="text-4xl font-bold text-gradient mb-8">
-          Mentions Légales
+          Mentions Légales — DJ FLO'W
         </h1>
 
         <div className="space-y-8 text-muted-foreground">

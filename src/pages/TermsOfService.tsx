@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -5,6 +6,17 @@ import { Link } from "react-router-dom";
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background py-12 px-4">
+      <Helmet>
+        <title>Conditions Générales d'Utilisation — DJ FLO'W</title>
+        <meta name="description" content="Conditions Générales d'Utilisation du site DJ FLO'W : règles d'usage, propriété intellectuelle et responsabilités." />
+        <link rel="canonical" href="https://florianmossler.fr/terms" />
+        <meta property="og:title" content="Conditions Générales d'Utilisation — DJ FLO'W" />
+        <meta property="og:description" content="Conditions Générales d'Utilisation du site DJ FLO'W : règles d'usage, propriété intellectuelle et responsabilités." />
+        <meta property="og:url" content="https://florianmossler.fr/terms" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Conditions Générales d'Utilisation — DJ FLO'W" />
+        <meta name="twitter:description" content="Conditions Générales d'Utilisation du site DJ FLO'W : règles d'usage, propriété intellectuelle et responsabilités." />
+      </Helmet>
       <div className="container max-w-4xl mx-auto">
         <Link to="/">
           <Button variant="outline" className="mb-8">
@@ -14,7 +26,7 @@ const TermsOfService = () => {
         </Link>
 
         <h1 className="text-4xl font-bold text-gradient mb-8">
-          Conditions Générales d'Utilisation
+          Conditions Générales d'Utilisation — DJ FLO'W
         </h1>
 
         <div className="space-y-8 text-muted-foreground">

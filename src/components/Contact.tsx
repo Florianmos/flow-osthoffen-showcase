@@ -272,6 +272,7 @@ const Contact = () => {
               <div className="flex gap-4">
                 <a
                   href="https://www.pagesjaunes.fr/pros/63816124"
+                  aria-label="DJ FLO'W sur PagesJaunes"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
@@ -280,6 +281,7 @@ const Contact = () => {
                 </a>
                 <a
                   href="https://www.linkedin.com/company/dj-flo-w-florian-mossler"
+                  aria-label="DJ FLO'W sur LinkedIn"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"
@@ -288,6 +290,7 @@ const Contact = () => {
                 </a>
                 <a
                   href="https://www.messenger.com/t/100007795607930"
+                  aria-label="Contacter DJ FLO'W sur Messenger"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg bg-background/20 hover:bg-background/30 flex items-center justify-center transition-colors"

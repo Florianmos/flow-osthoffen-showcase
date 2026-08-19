@@ -198,6 +198,8 @@ export function AddReviewDialog() {
                   onClick={() => setRating(star)}
                   onMouseEnter={() => setHoveredRating(star)}
                   onMouseLeave={() => setHoveredRating(0)}
+                  aria-label={`Donner une note de ${star} sur 5`}
+                  aria-pressed={star === rating}
                   className="transition-transform hover:scale-110"
                 >
                   <Star

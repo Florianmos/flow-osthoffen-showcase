@@ -66,9 +66,9 @@ const Partners = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <h4 className="font-semibold text-sm text-foreground mb-1">
+              <h3 className="font-semibold text-sm text-foreground mb-1">
                 {partner.name}
-              </h4>
+              </h3>
               <p className="text-xs text-muted-foreground">{partner.type}</p>
             </Card>
           ))}

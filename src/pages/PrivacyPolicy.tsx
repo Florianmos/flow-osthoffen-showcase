@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -5,6 +6,17 @@ import { Link } from "react-router-dom";
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background py-12 px-4">
+      <Helmet>
+        <title>Politique de Confidentialité — DJ FLO'W</title>
+        <meta name="description" content="Politique de confidentialité de DJ FLO'W : données collectées, finalités, durée de conservation et vos droits RGPD." />
+        <link rel="canonical" href="https://florianmossler.fr/privacy-policy" />
+        <meta property="og:title" content="Politique de Confidentialité — DJ FLO'W" />
+        <meta property="og:description" content="Politique de confidentialité de DJ FLO'W : données collectées, finalités, durée de conservation et vos droits RGPD." />
+        <meta property="og:url" content="https://florianmossler.fr/privacy-policy" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Politique de Confidentialité — DJ FLO'W" />
+        <meta name="twitter:description" content="Politique de confidentialité de DJ FLO'W : données collectées, finalités, durée de conservation et vos droits RGPD." />
+      </Helmet>
       <div className="container max-w-4xl mx-auto">
         <Link to="/">
           <Button variant="outline" className="mb-8">
@@ -14,7 +26,7 @@ const PrivacyPolicy = () => {
         </Link>
 
         <h1 className="text-4xl font-bold text-gradient mb-8">
-          Politique de Confidentialité
+          Politique de Confidentialité — DJ FLO'W
         </h1>
 
         <div className="space-y-8 text-muted-foreground">
