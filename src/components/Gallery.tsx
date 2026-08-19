@@ -14,6 +14,9 @@ import photovid2 from "@/assets/video/vid2.jpg";
 import vid2 from "@/assets/video/vid2.mp4";
 import photovid3 from "@/assets/video/vid3.jpg";
 import vid3 from "@/assets/video/vid3.mp4";
+import photovid4 from "@/assets/video/vid4.jpg";
+import vid4 from "@/assets/video/vid4.mp4";
+
 import VideoDialog from "./VideoDialog";
 
 const Gallery = () => {
@@ -52,20 +55,27 @@ const Gallery = () => {
   ];
 
   const videos = [
-    {
+        {
       id: 1,
+      thumbnail: photovid4,
+      title:
+        "Sonorisation cérémonie laïque et préparatif - Château d'Einhartshausen | Phalsbourg",
+      url: vid4,
+    },
+    {
+      id: 2,
       thumbnail: photovid1,
       title: "Soirée d'été - Camping Plage du Staedly",
       url: vid1,
     },
     {
-      id: 2,
+      id: 3,
       thumbnail: photovid2,
       title: "Anniversaire de Barbara - Salle polyvalente Dangolsheim",
       url: vid2,
     },
     {
-      id: 3,
+      id: 4,
       thumbnail: photovid3,
       title:
         "Sonorisation cérémonie laïque et préparatif - Château d'Einhartshausen | Phalsbourg",
@@ -135,7 +145,7 @@ const Gallery = () => {
           </TabsContent>
 
           <TabsContent value="videos" className="animate-fade-in">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {videos.map((video) => (
                 <Card
                   key={video.id}

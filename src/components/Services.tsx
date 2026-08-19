@@ -101,7 +101,7 @@ const Services = () => {
             Mes Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Je m'appelle Florian, j'ai 28 ans et je suis DJ mobile généraliste
+            Je m'appelle Florian, j'ai 29 ans et je suis DJ mobile généraliste
             depuis plusieurs années. Je m'adapte à chaque événement pour créer
             une expérience mémorable.
           </p>

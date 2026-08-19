@@ -122,7 +122,7 @@ const Footer = () => {
               aria-label="MariagePresta - Annuaire de prestataires mariage"
             >
               <ExternalLink className="w-3 h-3" />
-              MariagePresta
+              https://www.mariagepresta.fr
             </a>
           </div>
           <p className="flex items-center justify-center gap-2">
