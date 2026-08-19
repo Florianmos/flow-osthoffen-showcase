@@ -47,4 +47,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://flow-osthoffen-showcase.lovable.app/sitemap.xml
+Sitemap: https://florianmossler.fr/sitemap.xml
