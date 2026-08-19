@@ -1,4 +1,4 @@
-import { Music, Heart } from "lucide-react";
+import { Music, Heart, ExternalLink } from "lucide-react";
 import logo from "@/assets/logo.svg";
 
 const Footer = () => {
@@ -112,6 +112,17 @@ const Footer = () => {
               className="hover:text-primary transition-colors text-sm"
             >
               Mentions légales
+            </a>
+            <span>•</span>
+            <a
+              href="https://www.mariagepresta.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors text-sm inline-flex items-center gap-1"
+              aria-label="MariagePresta - Annuaire de prestataires mariage"
+            >
+              <ExternalLink className="w-3 h-3" />
+              MariagePresta
             </a>
           </div>
           <p className="flex items-center justify-center gap-2">
